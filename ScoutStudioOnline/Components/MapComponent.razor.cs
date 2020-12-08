@@ -10,14 +10,12 @@ namespace ScoutStudioOnline.Components
     public class MapModel : ComponentBase
     {
         [Inject]
-        private IJSRuntime jsRuntime { get; set; }
+        private IJSRuntime _jsRuntime { get; set; }
 
-        [Inject]
-        [Parameter]
-        public MapsService MapService { get; set; }
-
-        [Parameter]
-        public Map MapControl { get; set; }
+        [Inject]        
+        protected MapsService MapService { get; set; }
+        
+        protected Map MapControl { get; set; }
 
         [Parameter]
         public bool IsShowSelectMap { get; set; } = true;
@@ -39,13 +37,13 @@ namespace ScoutStudioOnline.Components
 
         private LatLng _mapCenterPosition = new LatLng(59.948080f, 30.326621f);
 
-        private TileLayer CurrentLayer;
+        private TileLayer _currentLayer;
 
         private bool _isInitMap = false;
 
         protected override void OnInitialized()
         {
-            MapControl = new Map(jsRuntime)
+            MapControl = new Map(_jsRuntime)
             {
                 Center = _mapCenterPosition,
                 Zoom = 13f
@@ -57,7 +55,7 @@ namespace ScoutStudioOnline.Components
 
             MapControl.OnInitialized += () =>
             {
-                MapControl.AddLayer(CurrentLayer);
+                MapControl.AddLayer(_currentLayer);
                 _isInitMap = true;
             };
         }
@@ -65,16 +63,16 @@ namespace ScoutStudioOnline.Components
         private void OnMapChange(MapType mapType)
         {
             var newMap = MapService.Maps[mapType];
-            MapControl.RemoveLayer(CurrentLayer);
+            MapControl.RemoveLayer(_currentLayer);
 
             InitCurrentLayer(newMap);
 
-            MapControl.AddLayer(CurrentLayer);
+            MapControl.AddLayer(_currentLayer);
         }
 
         private void InitCurrentLayer(MapInfo map)
         {
-            CurrentLayer = new TileLayer
+            _currentLayer = new TileLayer
             {
                 UrlTemplate = map.BaseUrl,
                 Subdomains = map.Subdomains,
