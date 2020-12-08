@@ -19,4 +19,8 @@
     <Folder Include="Core\Map\" />
   </ItemGroup>
 
+  <ItemGroup>
+    <ProjectReference Include="..\LeafletMapComponent\LeafletMapComponent.csproj" />
+  </ItemGroup>
+
 </Project>

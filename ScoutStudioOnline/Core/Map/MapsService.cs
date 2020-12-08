@@ -1,7 +1,5 @@
-﻿using System;
+﻿using LeafletMapComponent.Models;
 using System.Collections.Generic;
-using System.Linq;
-using System.Threading.Tasks;
 
 namespace ScoutOnline.Core.Map
 {
@@ -25,7 +23,7 @@ namespace ScoutOnline.Core.Map
                 Subdomains = new string[] {"a", "b", "c"},
                 MaxZoom = 19,
                 Attribution = @"&copy; <a href=""https://www.openstreetmap.org/copyright"">OpenStreetMap</a>, Tiles courtesy of <a href=""https://hot.openstreetmap.org/"" target=""_blank"">Humanitarian OpenStreetMap Team</a>",
-                Projection = BlazorLeaflet.Models.MapProjection.EPSG3857
+                Projection = MapProjection.EPSG3857
             });
 
             _maps.Add(MapType.Yandex, new MapInfo
@@ -36,7 +34,7 @@ namespace ScoutOnline.Core.Map
                 Subdomains = new string[] { "01", "02", "03", "04" },
                 MaxZoom = 19,
                 Attribution = @"&copy; <a href=""http://yandex.ru"" target=""_blank"">Яндекс</a>",
-                Projection = BlazorLeaflet.Models.MapProjection.EPSG3395
+                Projection = MapProjection.EPSG3395
             });
 
             _maps.Add(MapType.YandexSatellite, new MapInfo
@@ -47,7 +45,7 @@ namespace ScoutOnline.Core.Map
                 Subdomains = new string[] { "01", "02", "03", "04" },
                 MaxZoom = 17,
                 Attribution = @"&copy; <a href=""http://yandex.ru"" target=""_blank"">Яндекс</a>",
-                Projection = BlazorLeaflet.Models.MapProjection.EPSG3395
+                Projection = MapProjection.EPSG3395
             });
 
             _maps.Add(MapType.GoogleStreet, new MapInfo
@@ -58,7 +56,7 @@ namespace ScoutOnline.Core.Map
                 Subdomains = new string[] { "mt0", "mt1", "mt2", "mt3" },
                 MaxZoom = 20,                
                 Attribution = @"&copy; <a href=""http://google.ru"" target=""_blank"">Google</a>",
-                Projection = BlazorLeaflet.Models.MapProjection.EPSG3857
+                Projection = MapProjection.EPSG3857
             });
 
             _maps.Add(MapType.GoogleHybrid, new MapInfo
@@ -69,7 +67,7 @@ namespace ScoutOnline.Core.Map
                 Subdomains = new string[] { "mt0", "mt1", "mt2", "mt3" },
                 MaxZoom = 20,
                 Attribution = @"&copy; <a href=""http://google.ru"" target=""_blank"">Google</a>",
-                Projection = BlazorLeaflet.Models.MapProjection.EPSG3857
+                Projection = MapProjection.EPSG3857
             });
 
             _maps.Add(MapType.GoogleSatellite, new MapInfo
@@ -80,7 +78,7 @@ namespace ScoutOnline.Core.Map
                 Subdomains = new string[] { "mt0", "mt1", "mt2", "mt3" },
                 MaxZoom = 20,
                 Attribution = @"&copy; <a href=""http://google.ru"" target=""_blank"">Google</a>",
-                Projection = BlazorLeaflet.Models.MapProjection.EPSG3857
+                Projection = MapProjection.EPSG3857
             });
 
             _maps.Add(MapType.Wikimapia, new MapInfo
@@ -91,7 +89,7 @@ namespace ScoutOnline.Core.Map
                 Subdomains = new string[] { "i" },
                 MaxZoom = 20,
                 Attribution = @"&copy; <a href=""http://wikimapia.org"" target=""_blank"">Wikimapia.org</a>",
-                Projection = BlazorLeaflet.Models.MapProjection.EPSG3857
+                Projection = MapProjection.EPSG3857
             });
         }       
     }
