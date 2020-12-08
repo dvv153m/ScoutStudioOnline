@@ -18,7 +18,8 @@ namespace ScoutStudioOnline.Components
         [Inject]
         private MapsService MapService { get; set; }
 
-        private Map MapControl;
+        [Parameter]
+        public Map MapControl { get; set; }
 
         private MapType _currentMapType = MapType.Openstreet;
 
@@ -34,7 +35,14 @@ namespace ScoutStudioOnline.Components
                 Zoom = 13f
             };
 
-            ScoutOnline.Core.Map.MapInfo map = MapService.Maps[_currentMapType];
+            MapInfo map = MapService.Maps[_currentMapType];
+
+            InitCurrentLayer(map);
+
+            MapControl.OnInitialized += () =>
+            {
+                MapControl.AddLayer(CurrentLayer);
+            };
         }
 
         private void InitCurrentLayer(MapInfo map)
