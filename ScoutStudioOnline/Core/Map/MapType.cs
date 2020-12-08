@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 
-namespace ScoutOnline.Core.Map
+namespace ScoutStudioOnline.Core.Map
 {
     public enum MapType : byte
     {

@@ -1,7 +1,7 @@
 ﻿using LeafletMapComponent.Models;
 using System.Collections.Generic;
 
-namespace ScoutOnline.Core.Map
+namespace ScoutStudioOnline.Core.Map
 {
     public class MapsService
     {
