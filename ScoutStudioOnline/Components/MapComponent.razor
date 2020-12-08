@@ -1,13 +1,16 @@
 ﻿
 @inherits MapModel
 
-<label style="margin-left:20px">Карта:</label>
-<select @bind="CurrentMapType">
-    @foreach (var map in MapService.Maps)
-    {
-        <option value="@map.Key">@map.Value.Title</option>
-    }
-</select>
+@if(IsShowSelectMap)
+{
+    <label style="margin-left:20px">Карта:</label>
+    <select @bind="CurrentMapType">
+        @foreach (var map in MapService.Maps)
+        {
+            <option value="@map.Key">@map.Value.Title</option>
+        }
+    </select>
+}
 
 <div id="mapContainer" style="margin-top:10px; width: 100%; height: 90vh;">
     <LeafletMap Map="MapControl" />

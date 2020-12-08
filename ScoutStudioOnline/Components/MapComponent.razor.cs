@@ -18,17 +18,20 @@ namespace ScoutStudioOnline.Components
 
         [Parameter]
         public Map MapControl { get; set; }
+
+        [Parameter]
+        public bool IsShowSelectMap { get; set; } = true;
         
-        private MapType _currentMapType = MapType.Openstreet;
+        private MapType _currentMapType;
         [Parameter]
         public MapType CurrentMapType
         {
             get { return _currentMapType; }
             set
-            {
+            {                
+                _currentMapType = value;
                 if (_isInitMap)
-                {
-                    _currentMapType = value;
+                {                    
                     OnMapChange(_currentMapType);
                 }
             }
