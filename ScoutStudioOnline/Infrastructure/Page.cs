@@ -13,9 +13,9 @@ namespace ScoutStudioOnline.Infrastructure
         public IEnumerable<T> Data { get; set; }
         public int TotalQuantity { get; set; }
 
-        public Page(int totalQuantity, IEnumerable<T> pageInfo)
+        public Page(IEnumerable<T> data, int totalQuantity)
         {
-            Data = pageInfo;
+            Data = data;
             TotalQuantity = totalQuantity;
         }
     }

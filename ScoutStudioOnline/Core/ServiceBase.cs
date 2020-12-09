@@ -57,8 +57,7 @@ namespace ScoutStudioOnline.Core
                 if (response.StatusCode == HttpStatusCode.OK)
                 {
                     var responseFromServer = await response.Content.ReadAsStringAsync().ConfigureAwait(false);
-                    var obj = JsonSerializer.Deserialize<T>(responseFromServer);
-                    return obj;
+                    return JsonSerializer.Deserialize<T>(responseFromServer, new JsonSerializerOptions() { PropertyNamingPolicy = JsonNamingPolicy.CamelCase });                    
                 }
                 else if (response.StatusCode == HttpStatusCode.Unauthorized && refreshToken)
                 {
