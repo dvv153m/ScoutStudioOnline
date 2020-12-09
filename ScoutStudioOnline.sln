@@ -3,9 +3,9 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 16
 VisualStudioVersion = 16.0.30711.63
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ScoutStudioOnline", "ScoutStudioOnline\ScoutStudioOnline.csproj", "{92756A04-32A6-45B4-9D93-696D839BC464}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ScoutStudioOnline", "ScoutStudioOnline\ScoutStudioOnline.csproj", "{92756A04-32A6-45B4-9D93-696D839BC464}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "LeafletMapComponent", "LeafletMapComponent\LeafletMapComponent.csproj", "{5B657F48-6E8D-41B4-BF80-3F01D7EA3771}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "LeafletMapComponent", "LeafletMapComponent\LeafletMapComponent.csproj", "{5B657F48-6E8D-41B4-BF80-3F01D7EA3771}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
