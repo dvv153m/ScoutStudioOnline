@@ -1,7 +1,11 @@
 ﻿using Blazored.LocalStorage;
-using System;
-using System.Collections.Generic;
-using System.Linq;
+using Microsoft.Extensions.Configuration;
+using ScoutStudioOnline.Core.Auth;
+using System.Net;
+using System.Net.Http;
+using System.Net.Http.Headers;
+using System.Text;
+using System.Text.Json;
 using System.Threading.Tasks;
 
 namespace ScoutStudioOnline.Core
@@ -53,7 +57,7 @@ namespace ScoutStudioOnline.Core
                 if (response.StatusCode == HttpStatusCode.OK)
                 {
                     var responseFromServer = await response.Content.ReadAsStringAsync().ConfigureAwait(false);
-                    return JsonConvert.DeserializeObject<T>(responseFromServer);
+                    return JsonSerializer.Deserialize<T>(responseFromServer);
                 }
                 else if (response.StatusCode == HttpStatusCode.Unauthorized && refreshToken)
                 {
