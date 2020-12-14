@@ -1,0 +1,29 @@
+﻿
+@using System.Threading.Tasks
+@using AmChartsComponent
+@using AmChartsComponent.Models
+@using Microsoft.AspNetCore.Components
+@inject IJSRuntime JsRuntime
+
+@foreach(var t in ChartControl.ChartModels)
+{
+    <div id="@t.Id" class="@Class"></div>
+}
+
+@code {
+    //[Parameter] public string Id { get; set; }
+    [Parameter] public string Class { get; set; }
+    //[Parameter] public BlazorChart.Models.ChartModel[] Charts { get; set; }
+    [Parameter] public ChartControl ChartControl { get; set; }
+ 
+    protected override async Task OnAfterRenderAsync(bool firstRender)
+    {
+        //if (firstRender)
+        if(ChartControl.CountPoints > 9)
+        {
+            await AmChartsJsInterop.Init(JsRuntime, ChartControl);            
+            //await ChartInterop.Init(JsRuntime, Charts);            
+        }
+    }
+
+}

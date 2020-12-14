@@ -29,8 +29,8 @@ namespace ScoutStudioOnline.Core.Auth
 
         public async Task<bool> Login(string username, string password)
         {
-            username = "demo"; //"dvv";
-            password = "demo"; //""Hulycar8266";
+            username = "dvv"; //"dvv";//demo
+            password = "Hulycar8266"; //""Hulycar8266";//demo
             string requestData = $"grant_type=password&username={username}&password={password}&locale=ru&client_id=8b1fd704-096e-42d6-9ba5-6d98980e7cd1&client_secret=scout-online";
 
             return await RequestAuth(requestData);            

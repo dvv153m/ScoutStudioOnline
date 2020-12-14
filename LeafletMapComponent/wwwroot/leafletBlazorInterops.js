@@ -6,6 +6,7 @@ const LayerType = Object.freeze({ "Unknown": 0, "Polygon": 1, "Marker": 2 })
 const ProjectionType = Object.freeze({ "EPSG3395": 0, "EPSG3857": 1 })
 
 window.leafletBlazor = {
+
     create: function (map, objectReference) {
 
         var leafletMap = L.map(map.id, {
