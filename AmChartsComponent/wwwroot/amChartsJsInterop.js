@@ -10,7 +10,7 @@ window.amcharts = {
     //export function init(countPoints, chartModelsJson) {
     init: function (countPoints, chartModelsJson) {
 
-        charts = [];
+        charts = [];        
         countGPoints = countPoints;
 
         am4core.ready(function () {
@@ -21,16 +21,25 @@ window.amcharts = {
             // Themes end
 
             var chartModels = JSON.parse(chartModelsJson);
-
+            var isNeedScroll = true;
+            var number = 1;
             chartModels.forEach((element) => {
 
-                charts.push(createChart(element.Id));
+                var sensorName = "Sensor " + number.toString();
+                charts.push(createChart(element.Id, sensorName, isNeedScroll));
+                isNeedScroll = false;
+                number++;
             })
 
-            function createChart(idChart) {
+            function createChart(idChart, header, isNeedScroll) {
 
                 // Create chart instance
                 var chart = am4core.create(idChart, am4charts.XYChart);
+
+                var title = chart.titles.create();
+                title.text = header;
+                title.fontSize = 25;
+                title.marginBottom = 5;
 
                 // Add data
                 chart.data = generateChartData();
@@ -71,9 +80,11 @@ window.amcharts = {
                 //bullet.circle.strokeWidth = 1;
 
                 // Add scrollbar
-                chart.scrollbarX = new am4core.Scrollbar();
-                //chart.scrollbarX = new am4charts.XYChartScrollbar();
-                //chart.scrollbarX.series.push(series);
+                if (isNeedScroll) {
+                    chart.scrollbarX = new am4core.Scrollbar();
+                    //chart.scrollbarX = new am4charts.XYChartScrollbar();
+                    //chart.scrollbarX.series.push(series);
+                }
 
                 // Add cursor
                 chart.cursor = new am4charts.XYCursor();
