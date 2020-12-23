@@ -33,4 +33,8 @@ namespace ScoutStudioOnline
             await builder.Build().RunAsync();
         }
     }
+
+    //оптимизировать графики настройками amcharts
+    //d:\Test\Chart\amchart\
+    //https://webtest.scout-gps.ru
 }

@@ -42,14 +42,16 @@ window.amcharts = {
                 dateAxis.dataFields.category = "Date";
                 dateAxis.renderer.grid.template.location = 0.5;
                 dateAxis.dateFormatter.inputDateFormat = "yyyy-MM-dd";
-                dateAxis.renderer.minGridDistance = 50;
-
+                //dateAxis.renderer.minGridDistance = 50;
+                dateAxis.groupData = true;
+                dateAxis.groupCount = 500;
                 dateAxis.events.on("startendchanged", dateAxisChanged);                
 
                 var valueAxis = chart.yAxes.push(new am4charts.ValueAxis());
 
                 // Create series
                 var series = chart.series.push(new am4charts.LineSeries());
+                series.minBulletDistance = 36;
                 series.dataFields.valueY = "value";
                 series.dataFields.dateX = "date";
                 series.strokeWidth = 2
@@ -88,7 +90,7 @@ window.amcharts = {
                 var dateAxis = chart.xAxes.push(new am4charts.DateAxis());
                 //dateAxis.renderer.minGridDistance = 50;
                 dateAxis.groupData = true;
-                dateAxis.groupCount = 1000;
+                dateAxis.groupCount = 500;
                 //подписка на изменение масштаба и скрол графика
                 dateAxis.events.on("startendchanged", dateAxisChanged);
                 
@@ -96,7 +98,7 @@ window.amcharts = {
 
                 // Create series
                 var series = chart.series.push(new am4charts.LineSeries());
-                series.minBulletDistance = 15;
+                series.minBulletDistance = 36;
                 series.dataFields.valueY = "visits";
                 series.dataFields.dateX = "date";
                 series.strokeWidth = 2;
