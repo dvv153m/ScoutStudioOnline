@@ -5,6 +5,9 @@
 @using Microsoft.AspNetCore.Components
 @inject IJSRuntime JsRuntime
 
+
+<div id="sliderdiv"></div>
+
 @foreach(var t in ChartControl.ChartModels)
 {
     <div id="@t.Id" class="@Class"></div>
