@@ -1,6 +1,6 @@
-﻿@page "/chart"
+﻿@page "/chart5"
 
-<h3>Chart v1</h3>
+<h3>Chartv1</h3>
 <label>Кол-во точек:</label>
 <input type="number" id="tentacles" name="tentacles" @bind="currentCountPoinst" min="10" max="1000000">
 <button class="btn btn-primary" @onclick="Apply">Применить</button>
@@ -15,17 +15,17 @@
 
 
 @code {
-    ChartControl _chartControl = null;
+
+    ChartControl _chartControl;
     private int currentCountPoinst = 10000;
 
     protected override void OnInitialized()
     {
-        _chartControl = new ChartControl(5, 2);        
+        _chartControl = new ChartControl();
     }
 
     private void Apply()
     {        
-        _chartControl = new ChartControl(currentCountPoinst, 2);
+        _chartControl = new ChartControl(currentCountPoinst, 5);
     }
-
 }

@@ -1,8 +1,10 @@
-﻿@page "/chart"
+﻿@page "/chart10"
 
-<h3>Chart v1</h3>
-<label>Кол-во точек:</label>
-<input type="number" id="tentacles" name="tentacles" @bind="currentCountPoinst" min="10" max="1000000">
+<h3>Chart v2</h3>
+
+<p>Кол-во точек:</p>
+<input type="number" id="tentacles" name="tentacles" @bind="currentCountPoinst"
+       min="10" max="1000000">
 <button class="btn btn-primary" @onclick="Apply">Применить</button>
 
 <AmChartsComponent.AmCharts Class="chartdiv" ChartControl="_chartControl"></AmChartsComponent.AmCharts>
@@ -15,17 +17,17 @@
 
 
 @code {
-    ChartControl _chartControl = null;
+
+    ChartControl _chartControl;
     private int currentCountPoinst = 10000;
 
     protected override void OnInitialized()
     {
-        _chartControl = new ChartControl(5, 2);        
+        _chartControl = new ChartControl();
     }
 
     private void Apply()
     {        
-        _chartControl = new ChartControl(currentCountPoinst, 2);
+        _chartControl = new ChartControl(currentCountPoinst, 10);
     }
-
 }

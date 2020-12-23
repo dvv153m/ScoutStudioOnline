@@ -12,6 +12,11 @@ namespace AmChartsComponent.Models
 
         public int CountPoints { get; set; }
 
+        public ChartControl()
+        {
+            ChartModels = new ChartModel[0];
+        }
+
         public ChartControl(int countPoints, int countChart)
         {
             ChartModels = new ChartModel[countChart];
