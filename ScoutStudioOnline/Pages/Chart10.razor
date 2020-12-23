@@ -1,19 +1,12 @@
 ﻿@page "/chart10"
 
-<h3>Chart v2</h3>
-
-<p>Кол-во точек:</p>
-<input type="number" id="tentacles" name="tentacles" @bind="currentCountPoinst"
-       min="10" max="1000000">
+<h3>Chart v1 - 10 charts</h3>
+<label>Кол-во точек:</label>
+<input type="number" id="tentacles" name="tentacles" @bind="currentCountPoinst" min="10" max="1000000">
 <button class="btn btn-primary" @onclick="Apply">Применить</button>
 
-<AmChartsComponent.AmCharts Class="chartdiv" ChartControl="_chartControl"></AmChartsComponent.AmCharts>
+<AmCharts Class="chartdiv" ChartControl="_chartControl"></AmCharts>
 
-<!--<BlazorChart.Chart Id="chartdiv1" Class="chartdiv"></BlazorChart.Chart>
-
-<BlazorChart.Chart Id="chartdiv2" Class="chartdiv"></BlazorChart.Chart>
-
-<BlazorChart.Chart Id="chartdiv3" Class="chartdiv"></BlazorChart.Chart>-->
 
 
 @code {
