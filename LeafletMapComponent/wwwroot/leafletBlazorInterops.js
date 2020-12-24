@@ -26,7 +26,12 @@ window.leafletBlazor = {
     addTilelayer: function (mapId, tileLayer, objectReference) {
 
         var crsProjection = getLeafletProjection(tileLayer.projection);        
-        maps[mapId].options.crs = crsProjection;        
+        var leafletMap = maps[mapId];
+        if (leafletMap.options.crs.code != crsProjection.code) {
+
+            leafletMap.options.crs = crsProjection;
+            leafletMap.setView(leafletMap.getCenter());
+        }            
 
         const layer = L.tileLayer(tileLayer.urlTemplate, {
             attribution: tileLayer.attribution,
@@ -47,6 +52,7 @@ window.leafletBlazor = {
             // TMS
             zoomReverse: tileLayer.isZoomReversed,
             detectRetina: tileLayer.detectRetina,
+            //reuseTiles: true,
             // crossOrigin
             /////////////////////////////
             //for wikimapia

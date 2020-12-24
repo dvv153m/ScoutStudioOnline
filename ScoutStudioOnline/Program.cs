@@ -35,6 +35,7 @@ namespace ScoutStudioOnline
     }
 
     //оптимизировать графики настройками amcharts
+    //в солюшене добавить папку Components и в нее добавить AmChartsComponent и LeafletMapComponent
     //d:\Test\Chart\amchart\
     //https://webtest.scout-gps.ru
 }
