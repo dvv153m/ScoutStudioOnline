@@ -20,6 +20,10 @@ window.amcharts = {
             am4core.useTheme(am4themes_material);
             am4core.useTheme(am4themes_animated);
             // Themes end
+            // for perfomance
+            am4core.options.minPolylineStep = 5;
+            //если браузер будет слишком тупить при загрузке графиков можно раскоментить строку ниже(графики будут последовательно загружаться)
+            //am4core.options.queue = true;
 
             var chartModels = JSON.parse(chartModelsJson);           
             var number = 1;
@@ -51,6 +55,7 @@ window.amcharts = {
 
                 // Create series
                 var series = chart.series.push(new am4charts.LineSeries());
+                //Если расстояние между точками данных меньше X пикселей, скрыть все маркеры(Bullet)
                 series.minBulletDistance = 36;
                 series.dataFields.valueY = "value";
                 series.dataFields.dateX = "date";
@@ -98,6 +103,7 @@ window.amcharts = {
 
                 // Create series
                 var series = chart.series.push(new am4charts.LineSeries());
+                //Если расстояние между точками данных меньше X пикселей, скрыть все маркеры(Bullet)
                 series.minBulletDistance = 36;
                 series.dataFields.valueY = "visits";
                 series.dataFields.dateX = "date";
@@ -109,9 +115,8 @@ window.amcharts = {
                 series.tooltip.label.padding(12, 12, 12, 12);
 
                 //рисование точек на графике
-                var bullet = series.bullets.push(new am4charts.CircleBullet());
-                //bullet.circle.stroke = am4core.color("#fff");
-                //bullet.circle.strokeWidth = 1;
+                var bullet = series.bullets.push(new am4core.Circle());
+                bullet.radius = 5;                
 
                 // Add cursor
                 chart.cursor = new am4charts.XYCursor();
