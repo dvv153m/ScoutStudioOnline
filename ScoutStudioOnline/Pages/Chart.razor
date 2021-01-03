@@ -6,6 +6,10 @@
 <input type="number" id="tentacles" name="tentacles" @bind="currentCountPoinst" min="10" max="1000000">
 <button class="btn btn-primary" @onclick="Apply">Применить</button>
 
+<input type="checkbox" id="addition1" @bind="isanimate"/>
+<label>IsAnimate</label>
+
+
 <AmCharts Class="chartdiv" ChartControl="_chartControl"></AmCharts>
 
 
@@ -13,6 +17,7 @@
 @code {
     ChartControl _chartControl = null;
     private int currentCountPoinst = 10000;
+    public bool isanimate {get;set;}
 
     protected override void OnInitialized()
     {
@@ -21,7 +26,7 @@
 
     private void Apply()
     {        
-        _chartControl = new ChartControl(currentCountPoinst, 2);
+        _chartControl = new ChartControl(currentCountPoinst, 2, isanimate);
     }
 
 }

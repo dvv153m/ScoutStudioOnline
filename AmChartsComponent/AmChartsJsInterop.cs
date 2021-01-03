@@ -17,7 +17,7 @@ namespace AmChartsComponent
         public static ValueTask Init(IJSRuntime jsRuntime, ChartControl chartControl)
         {
             var chartModelsJson = System.Text.Json.JsonSerializer.Serialize(chartControl.ChartModels);
-            return jsRuntime.InvokeVoidAsync("window.amcharts.init", chartControl.CountPoints, chartModelsJson);
+            return jsRuntime.InvokeVoidAsync("window.amcharts.init", chartControl.CountPoints, chartModelsJson, chartControl.IsAnimate);
         }
 
         private readonly Lazy<Task<IJSObjectReference>> moduleTask;

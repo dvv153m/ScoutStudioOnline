@@ -12,12 +12,14 @@ namespace AmChartsComponent.Models
 
         public int CountPoints { get; set; }
 
+        public bool IsAnimate { get; set; }
+
         public ChartControl()
         {
             ChartModels = new ChartModel[0];
         }
 
-        public ChartControl(int countPoints, int countChart)
+        public ChartControl(int countPoints, int countChart, bool isAnimate)
         {
             ChartModels = new ChartModel[countChart];
             for (int i = 0; i < countChart; i++)
@@ -26,6 +28,8 @@ namespace AmChartsComponent.Models
             }
 
             CountPoints = countPoints;
+
+            IsAnimate = isAnimate;
             /*ChartModels = new ChartModel[2]
             {
                 new ChartModel{ Id="chartdiv1"},

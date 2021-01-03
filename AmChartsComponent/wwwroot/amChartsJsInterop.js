@@ -8,7 +8,7 @@
 window.amcharts = {
 
     //export function init(countPoints, chartModelsJson) {
-    init: function (countPoints, chartModelsJson) {
+    init: function (countPoints, chartModelsJson, isAnimate) {
 
         charts = [];  
         slider = {};
@@ -18,7 +18,14 @@ window.amcharts = {
 
             // Themes begin
             am4core.useTheme(am4themes_material);
-            am4core.useTheme(am4themes_animated);
+            //animation
+            if (isAnimate) {
+                console.log("isAnimate=true");
+                am4core.useTheme(am4themes_animated);
+            }
+            else {
+                console.log("isAnimate=false");
+            }
             // Themes end
             // for perfomance
             am4core.options.minPolylineStep = 5;
@@ -61,6 +68,7 @@ window.amcharts = {
                 series.dataFields.dateX = "date";
                 series.strokeWidth = 2
                 series.strokeOpacity = 0.3;
+                series.showOnInit = false;
 
                 //slider
                 chart.scrollbarX = new am4core.Scrollbar();
