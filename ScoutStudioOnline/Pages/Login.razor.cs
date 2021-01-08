@@ -33,6 +33,7 @@ namespace ScoutStudioOnline.Pages
         {
             try
             {
+                loading = true;
                 bool isSuccessAuth = await AuthenticationService.Login(LoginData.UserName, LoginData.Password);
                 if (isSuccessAuth)
                 {
@@ -43,11 +44,14 @@ namespace ScoutStudioOnline.Pages
                     error = "not valid login or password";
                 }
             }
-            catch(Exception ex)
+            catch (Exception ex)
             {
-                error = ex.Message;
-                loading = false;
+                error = ex.Message;               
                 StateHasChanged();
+            }
+            finally
+            {
+                loading = false;
             }
             //return await Task.CompletedTask;
         }
