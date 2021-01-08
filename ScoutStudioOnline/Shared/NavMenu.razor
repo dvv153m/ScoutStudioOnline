@@ -1,39 +1,46 @@
-﻿<div class="top-row pl-4 navbar navbar-dark">
-    <a class="navbar-brand" href="">ScoutStudioOnline</a>
-    <button class="navbar-toggler" @onclick="ToggleNavMenu">
-        <span class="navbar-toggler-icon"></span>
-    </button>
-</div>
+﻿<AuthorizeView>
+    <Authorized>
+        <div class="top-row pl-4 navbar navbar-dark">
+            <a class="navbar-brand" href="">ScoutStudioOnline</a>
+            <button class="navbar-toggler" @onclick="ToggleNavMenu">
+            <span class="navbar-toggler-icon"></span>
+            </button>
+        </div>
 
-<div class="@NavMenuCssClass" @onclick="ToggleNavMenu">
-    <ul class="nav flex-column">
-        <li class="nav-item px-3">
-            <NavLink class="nav-link" href="" Match="NavLinkMatch.All">
-                <span class="oi oi-home" aria-hidden="true"></span> Home
-            </NavLink>
-        </li>
-        <li class="nav-item px-3">
-            <NavLink class="nav-link" href="onlinedata">
-                <span class="oi oi-list-rich" aria-hidden="true"></span> Текущие данные
-            </NavLink>
-        </li>
-        <li class="nav-item px-3">
-            <NavLink class="nav-link" href="chart">
-                <span class="oi oi-list-rich" aria-hidden="true"></span> Графики 
-            </NavLink>
-        </li>
-        <li class="nav-item px-3">
-           <NavLink class="nav-link" href="chart5">
-                <span class="oi oi-list-rich" aria-hidden="true"></span> Графики 5
-            </NavLink>
-        </li>
-        <li class="nav-item px-3">
-            <NavLink class="nav-link" href="chart10">
-                <span class="oi oi-list-rich" aria-hidden="true"></span> Графики 10
-            </NavLink>
-        </li>
-    </ul>
-</div>
+        <div class="@NavMenuCssClass" @onclick="ToggleNavMenu">
+            <ul class="nav flex-column">
+                <li class="nav-item px-3">
+                    <NavLink class="nav-link" href="" Match="NavLinkMatch.All">
+                        <span class="oi oi-home" aria-hidden="true"></span> Home
+                    </NavLink>
+                </li>
+                <li class="nav-item px-3">
+                    <NavLink class="nav-link" href="onlinedata">
+                        <span class="oi oi-list-rich" aria-hidden="true"></span> Текущие данные
+                    </NavLink>
+                </li>
+                <li class="nav-item px-3">
+                    <NavLink class="nav-link" href="chart">
+                        <span class="oi oi-list-rich" aria-hidden="true"></span> Графики 
+                    </NavLink>
+                </li>
+                <li class="nav-item px-3">
+                    <NavLink class="nav-link" href="chart5">
+                        <span class="oi oi-list-rich" aria-hidden="true"></span> Графики 5
+                    </NavLink>
+                </li>
+                <li class="nav-item px-3">
+                    <NavLink class="nav-link" href="chart10">
+                        <span class="oi oi-list-rich" aria-hidden="true"></span> Графики 10
+                    </NavLink>
+                </li>
+            </ul>
+        </div>
+    </Authorized>
+    <NotAuthorized>
+    
+    </NotAuthorized>   
+</AuthorizeView>
 
 @code {
     private bool collapseNavMenu = true;

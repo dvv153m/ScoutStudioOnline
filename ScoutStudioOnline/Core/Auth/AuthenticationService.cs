@@ -25,12 +25,14 @@ namespace ScoutStudioOnline.Core.Auth
         {
             _localStorageService = localStorageService;
             BaseUrl = config["BaseURI"];
+
+                        
         }
 
         public async Task<bool> Login(string username, string password)
         {
-            username = "dvv"; //"dvv";//demo
-            password = "Hulycar8266"; //""Hulycar8266";//demo
+            //username = "dvv"; //"dvv";//demo
+            //password = "Hulycar8266"; //""Hulycar8266";//demo
             string requestData = $"grant_type=password&username={username}&password={password}&locale=ru&client_id=8b1fd704-096e-42d6-9ba5-6d98980e7cd1&client_secret=scout-online";
 
             return await RequestAuth(requestData);            
@@ -38,6 +40,10 @@ namespace ScoutStudioOnline.Core.Auth
 
         public async Task<bool> RefreshTokensAsync()
         {
+            var tokenResponse = await _localStorageService.GetItemAsync<TokenResponse>(nameof(TokenResponse));
+            _accessToken = tokenResponse.AccessToken;
+            _refreshToken = tokenResponse.RefreshToken;
+
             string requestData = $"grant_type=refresh_token&refresh_token={_refreshToken}&client_id=scout-online&client_secret=scout-online";
             return await RequestAuth(requestData);            
         }
@@ -50,7 +56,7 @@ namespace ScoutStudioOnline.Core.Auth
             {
                 _accessToken = TokenResponse.AccessToken;
                 _refreshToken = TokenResponse.RefreshToken;
-                await _localStorageService.SetItemAsync<TokenResponse>("tokenResponse", TokenResponse);
+                await _localStorageService.SetItemAsync<TokenResponse>(nameof(TokenResponse), TokenResponse);
                 return true;
             }
             return false;

@@ -38,11 +38,11 @@ namespace ScoutStudioOnline.Core
 
         private async Task<T> Request<T>(HttpMethod httpMethod, string requestUrl, string requestData, bool refreshToken = true)
         {
-            var tokenResponse = await _localStorageService.GetItemAsync<TokenResponse>("tokenResponse");
+            var tokenResponse = await _localStorageService.GetItemAsync<TokenResponse>(nameof(TokenResponse));
             if (tokenResponse == null)
             {
                 await _authenticationService.Login("1", "1");
-                tokenResponse = await _localStorageService.GetItemAsync<TokenResponse>("tokenResponse");
+                tokenResponse = await _localStorageService.GetItemAsync<TokenResponse>(nameof(TokenResponse));
             }
             var requestMessage = new HttpRequestMessage(httpMethod, requestUrl);
             requestMessage.Headers.Authorization = new AuthenticationHeaderValue("Bearer", tokenResponse.AccessToken);

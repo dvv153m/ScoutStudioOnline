@@ -1,0 +1,40 @@
+﻿@page "/login"
+@inherits LoginModel
+
+<h3>Login</h3>
+
+<div class="col-md-6 offset-md-3 mt-5">    
+    <div class="card">
+        <h4 class="card-header">СКАУТ Online</h4>
+        <div class="card-body">
+            <EditForm Model="@LoginData" OnValidSubmit="LoginAsync">
+                <DataAnnotationsValidator />
+                <div class="form-group">
+                    <label>Username</label>
+                    <InputText @bind-Value="LoginData.UserName" class="form-control" />
+                    <ValidationMessage For="@(() => LoginData.UserName)" />
+                </div>
+                <div class="form-group">
+                    <label>Password</label>
+                    <InputText @bind-Value="LoginData.Password" type="password" class="form-control" />
+                    <ValidationMessage For="@(() => LoginData.Password)" />
+                </div>
+                <button class="btn btn-primary">
+                    @if (loading)
+                    {
+                        <span class="spinner-border spinner-border-sm mr-1"></span>
+                    }
+                    Login
+                </button>
+                @if (!string.IsNullOrEmpty(error))
+                {
+                    <div class="alert alert-danger mt-3 mb-0">@error</div>
+                }
+            </EditForm>
+        </div>
+    </div>
+</div>
+
+@code {
+
+}

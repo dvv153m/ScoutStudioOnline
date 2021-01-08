@@ -41,12 +41,44 @@ namespace ScoutStudioOnline
 
     public class TokenAuthenticationStateProvider : AuthenticationStateProvider
     {
+        public ILocalStorageService _localStorageService { get; set; }
+
+        public TokenAuthenticationStateProvider(ILocalStorageService localStorageService)
+        {
+            _localStorageService = localStorageService;
+        }
+
         public override async Task<AuthenticationState> GetAuthenticationStateAsync()
         {
-            var anonymousIdentity = new ClaimsIdentity();
-            var anonymousPrincipal = new ClaimsPrincipal(anonymousIdentity);
+            AuthenticationState CreateAnonymous()
+            {
+                var anonymousIdentity = new ClaimsIdentity();
+                var anonymousPrincipal = new ClaimsPrincipal(anonymousIdentity);
 
-            return new AuthenticationState(anonymousPrincipal);
+                return new AuthenticationState(anonymousPrincipal);
+            }
+            
+            var tokenResponse = await _localStorageService.GetItemAsync<TokenResponse>(nameof(TokenResponse));
+            if (tokenResponse == null)
+            {
+                return CreateAnonymous();
+            }
+
+            //todo add check expirated time
+            if (string.IsNullOrEmpty(tokenResponse.AccessToken))
+            {
+                return CreateAnonymous();
+            }
+
+            var claims = new List<Claim>
+            {
+                new Claim(ClaimTypes.Name, tokenResponse.AccessToken),
+                new Claim(ClaimTypes.Expired, tokenResponse.ExpiresIn.ToString())
+            };
+
+            var identity = new ClaimsIdentity(claims, "Token");
+            var principal = new ClaimsPrincipal(identity);
+            return new AuthenticationState(principal);
         }
     }
 
