@@ -31,10 +31,23 @@ namespace ScoutStudioOnline.Pages
 
         protected async Task LoginAsync()
         {
-            bool isSuccessAuth = await AuthenticationService.Login(LoginData.UserName, LoginData.Password);
-            if (isSuccessAuth)
+            try
             {
-                NavigationManager.NavigateTo(uri: "/", forceLoad: true);
+                bool isSuccessAuth = await AuthenticationService.Login(LoginData.UserName, LoginData.Password);
+                if (isSuccessAuth)
+                {
+                    NavigationManager.NavigateTo(uri: "/", forceLoad: true);
+                }
+                else
+                {
+                    error = "not valid login or password";
+                }
+            }
+            catch(Exception ex)
+            {
+                error = ex.Message;
+                loading = false;
+                StateHasChanged();
             }
             //return await Task.CompletedTask;
         }
