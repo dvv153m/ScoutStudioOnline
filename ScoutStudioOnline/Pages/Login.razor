@@ -20,15 +20,15 @@
                     <ValidationMessage For="@(() => LoginData.Password)" />
                 </div>
                 <button class="btn btn-primary">
-                    @if (loading)
+                    @if (Loading)
                     {
                         <span class="spinner-border spinner-border-sm mr-1"></span>
                     }
                     Login
                 </button>
-                @if (!string.IsNullOrEmpty(error))
+                @if (!string.IsNullOrEmpty(Error))
                 {
-                    <div class="alert alert-danger mt-3 mb-0">@error</div>
+                    <div class="alert alert-danger mt-3 mb-0">@Error</div>
                 }
             </EditForm>
         </div>

@@ -21,8 +21,8 @@ namespace ScoutStudioOnline.Pages
         [Inject]
         public NavigationManager NavigationManager { get; set; }
 
-        protected bool loading;
-        protected string error;
+        protected bool Loading;
+        protected string Error;
 
         public LoginModel()
         {
@@ -33,7 +33,7 @@ namespace ScoutStudioOnline.Pages
         {
             try
             {
-                loading = true;
+                Loading = true;
                 bool isSuccessAuth = await AuthenticationService.Login(LoginData.UserName, LoginData.Password);
                 if (isSuccessAuth)
                 {
@@ -41,17 +41,17 @@ namespace ScoutStudioOnline.Pages
                 }
                 else
                 {
-                    error = "not valid login or password";
+                    Error = "not valid login or password";
                 }
             }
             catch (Exception ex)
             {
-                error = ex.Message;               
+                Error = ex.Message;               
                 StateHasChanged();
             }
             finally
             {
-                loading = false;
+                Loading = false;
             }
             //return await Task.CompletedTask;
         }
