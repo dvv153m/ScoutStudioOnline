@@ -1,0 +1,2085 @@
+﻿<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<StiSerializer version="1.02" type="Net" application="StiReport">
+  <CacheAllData>True</CacheAllData>
+  <Dictionary Ref="1" type="Dictionary" isKey="true">
+    <BusinessObjects isList="true" count="1">
+      <Units Ref="2" type="Stimulsoft.Report.Dictionary.StiBusinessObject" isKey="true">
+        <Alias>Units</Alias>
+        <BusinessObjects isList="true" count="0" />
+        <Category />
+        <Columns isList="true" count="2">
+          <value>Id,System.Int32</value>
+          <value>UnitName,System.String</value>
+        </Columns>
+        <Dictionary isRef="1" />
+        <Guid>d93557fbd1774c0fab079aeb328b1db7</Guid>
+        <Name>Units</Name>
+      </Units>
+    </BusinessObjects>
+    <Databases isList="true" count="1">
+      <ReportData Ref="3" type="Stimulsoft.Report.Dictionary.StiODataDatabase" isKey="true">
+        <Alias>ReportData</Alias>
+        <ConnectionStringEncrypted>xCx7aNJIiynsRyV0eAzhk8Ngo4JLaEKVfEDtcO5xL7fzdnEPSU4L3WlizZDLCLSn/mKPy9hxUohoW81ESvRkw9Euc81UfnGEcEG82PgFpEbqOHOr03FrRWofgWjwbGr3/NKBjGZRUoVwYQ3E8AhgYsUqw2xmURMt8Xx97PF8rHP52oVJxhXDjHdFWUR77LWf8lLZyWkNGwVwYsXsYkCsbskC1enZAVHpwVytLHEt4/fqZMEIzFFZRWp53IH1FSqfhkZ1qERra61/UtnAZ6ij4/Qgs+hEUREBd2sxiWFA4rfYYnXoSQxa6fhyfYnuZOJu+xCBjExg021gfNUsfxHsP9l03ejFXIv5b1jhfH/QY7eJIPtI2m+q9XJviVx23GLzhwbLDeQIqg1vfn1E8ICsQ8hgYa7JdJPZ/FKwcPCc7JPEFIdMVm16RcJc1dx0LGoP0TyH7UlQWZX+QbksTx0tF8MwYQjkAKrFf33tWG+YIAPoIPWIy2xChHpi1aBybOUDnz7f7NIL4u1sfagsc0DoD8UcjepZanrN5kSoxHQt9yfmXL2u12FqRWF7CazlfCpv+VqZbc504mFqW5yE78T1bv/omytEC8uV41rNDHKg737K7MujWwtpbfZjWZxP2CtzgDaBK011UwljeuGcY9yqz/F0/ehEanLdc1iBbOWYpJPZEIFP0nz6cfhKMXB7aCgn3D5xC85Zk+F6S1kUdwhpatXQh21KFoNZ4nvlDHCM6jvcIIEoZnULLXESzQxi/OAPitKPb85bCpBvBd3EYnzjZ4FWc8tmT9JZ6X+knXAsKKPzYMGCzApixfwbrEz2zOg33ih57ORbWdX9ZSFcedxqO994oU7Mb5OoQkbQAGBYK7/SPI3P1WpilPwGzWBkICKj/CChTkh8Ytl3W02g5MSqY4TQ3ehITYtx/0WpiGvY42KA2MEtZmlJ9PEaPfTwYCMvyCCLoksBaU3+Q2VQTwEobv00hynSTePtYU4pxOd8oHadZvMJ2G1yhfZCca1L9OcPgWCZCEt8k5jxGIjweNAqdtlasezTfxJtwUasgf/sKkPaYIlNTXDCIWFnzWzmKetjwHrLK+d1G5HwQKV05AHjs9NGlSvSVZNZZ0HFcE+M8k/pWM+vVFlrfW4QLVD1jGAe+hTfTFNPkk38GazQy3zjC/nSY+jbAIsR70RtiPYgYYPUOKGj0wqSiE1RrNRv/CJKhlbf7loLuu1iUBUQZC2jTuFg1YI=</ConnectionStringEncrypted>
+        <Name>ReportData</Name>
+      </ReportData>
+    </Databases>
+    <DataSources isList="true" count="9">
+      <MotorModesStatistics Ref="4" type="Stimulsoft.Report.Dictionary.StiODataSource" isKey="true">
+        <Alias>MotorModesStatistics</Alias>
+        <Columns isList="true" count="8">
+          <value>Id,System.Int32</value>
+          <value>UnitId,System.Int32</value>
+          <value>Date,System.DateTimeOffset</value>
+          <value>EngineOnDuration,System.TimeSpan</value>
+          <value>EngineOffDuration,System.String</value>
+          <value>EngineActiveWorkDuration,System.String</value>
+          <value>EngineIdleDuration,System.TimeSpan</value>
+          <value>Periods,System.String</value>
+        </Columns>
+        <CommandTimeout>30</CommandTimeout>
+        <Dictionary isRef="1" />
+        <Key>2a454c70ce004acd862afa8f10413971</Key>
+        <Name>MotorModesStatistics</Name>
+        <NameInSource>ReportData</NameInSource>
+        <Parameters isList="true" count="0" />
+        <SqlCommand>MotorModesStatistics?{ODataFilter}&amp;timezone='Europe/Moscow'</SqlCommand>
+      </MotorModesStatistics>
+      <MotorPeriodMileagesStatistics Ref="5" type="Stimulsoft.Report.Dictionary.StiODataSource" isKey="true">
+        <Alias>MotorPeriodMileagesStatistics</Alias>
+        <Columns isList="true" count="10">
+          <value>Id,System.Int32</value>
+          <value>UnitId,System.Int32</value>
+          <value>Date,System.DateTimeOffset</value>
+          <value>PeriodType,System.String</value>
+          <value>PeriodBegin,System.DateTimeOffset</value>
+          <value>PeriodEnd,System.DateTimeOffset</value>
+          <value>MileageKm,System.Double</value>
+          <value>AverageSpeedKmh,System.Double</value>
+          <value>MinimumSpeedKmh,System.Double</value>
+          <value>MaximumSpeedKmh,System.Double</value>
+        </Columns>
+        <CommandTimeout>30</CommandTimeout>
+        <Dictionary isRef="1" />
+        <Key>549aae543cfa46cdb017d7016bea51f8</Key>
+        <Name>MotorPeriodMileagesStatistics</Name>
+        <NameInSource>ReportData</NameInSource>
+        <Parameters isList="true" count="0" />
+        <SqlCommand>MotorPeriodMileagesStatistics?{ODataFilter}&amp;timezone='Europe/Moscow'</SqlCommand>
+      </MotorPeriodMileagesStatistics>
+      <MotorPeriodsStatistics Ref="6" type="Stimulsoft.Report.Dictionary.StiODataSource" isKey="true">
+        <Alias>MotorPeriodsStatistics</Alias>
+        <Columns isList="true" count="8">
+          <value>Id,System.Int32</value>
+          <value>UnitId,System.Int32</value>
+          <value>Date,System.DateTimeOffset</value>
+          <value>PeriodType,System.String</value>
+          <value>PeriodBegin,System.DateTimeOffset</value>
+          <value>PeriodEnd,System.DateTimeOffset</value>
+          <value>IsEngineOn,System.Boolean</value>
+          <value>IsActiveWork,System.Boolean</value>
+        </Columns>
+        <CommandTimeout>30</CommandTimeout>
+        <Dictionary isRef="1" />
+        <Key>b2836300c43b49acbc419321cfc4c58b</Key>
+        <Name>MotorPeriodsStatistics</Name>
+        <NameInSource>ReportData</NameInSource>
+        <Parameters isList="true" count="0" />
+        <SqlCommand>MotorPeriodsStatistics?{ODataFilter}&amp;timezone='Europe/Moscow'</SqlCommand>
+      </MotorPeriodsStatistics>
+      <MoveWithFuelPeriodsStatistics Ref="7" type="Stimulsoft.Report.Dictionary.StiODataSource" isKey="true">
+        <Alias>MoveWithFuelPeriodsStatistics</Alias>
+        <Columns isList="true" count="21">
+          <value>Id,System.Int32</value>
+          <value>UnitId,System.Int32</value>
+          <value>Date,System.DateTimeOffset</value>
+          <value>PeriodType,System.String</value>
+          <value>PeriodBegin,System.DateTimeOffset</value>
+          <value>PeriodEnd,System.DateTimeOffset</value>
+          <value>PeriodBeforeSeparationBegin,System.DateTimeOffset</value>
+          <value>PeriodBeforeSeparationEnd,System.DateTimeOffset</value>
+          <value>MileageKm,System.Double</value>
+          <value>AverageSpeedKmh,System.Double</value>
+          <value>MinimumSpeedKmh,System.Double</value>
+          <value>MaximumSpeedKmh,System.Double</value>
+          <value>Address,System.String</value>
+          <value>Geofences,System.String</value>
+          <value>Latitude,System.Double</value>
+          <value>Longitude,System.Double</value>
+          <value>EngineIdleDuration,System.String</value>
+          <value>EngineActiveWorkDuration,System.String</value>
+          <value>FinalFuelLevelL,System.Double</value>
+          <value>InitialFuelLevelL,System.Double</value>
+          <value>FuelChangeL,System.Double</value>
+        </Columns>
+        <CommandTimeout>30</CommandTimeout>
+        <Dictionary isRef="1" />
+        <Key>ddda4ed511244cee9687dcdcb8b84ebc</Key>
+        <Name>MoveWithFuelPeriodsStatistics</Name>
+        <NameInSource>ReportData</NameInSource>
+        <Parameters isList="true" count="0" />
+        <SqlCommand>MoveWithFuelPeriodsStatistics?{ODataFilter}&amp;timezone='Europe/Moscow'</SqlCommand>
+      </MoveWithFuelPeriodsStatistics>
+      <TrackPeriodsMileageStatistics Ref="8" type="Stimulsoft.Report.Dictionary.StiODataSource" isKey="true">
+        <Alias>TrackPeriodsMileageStatistics</Alias>
+        <Columns isList="true" count="19">
+          <value>Id,System.Int32</value>
+          <value>UnitId,System.Int32</value>
+          <value>Date,System.DateTimeOffset</value>
+          <value>MovementDuration,System.String</value>
+          <value>ParkingDuration,System.String</value>
+          <value>BreakDuration,System.String</value>
+          <value>TotalDuration,System.String</value>
+          <value>MovementMileageKm,System.Double</value>
+          <value>BreakMileageKm,System.Double</value>
+          <value>TotalMileageKm,System.Double</value>
+          <value>WorkTimeMileageKm,System.Double</value>
+          <value>WorkTimeMovementDuration,System.String</value>
+          <value>WorkTimeParkingDuration,System.String</value>
+          <value>WorkTimeBreakDuration,System.String</value>
+          <value>WorkTimeDuration,System.String</value>
+          <value>MinimumSpeedKmh,System.Double</value>
+          <value>MaximumSpeedKmh,System.Double</value>
+          <value>AverageSpeedKmh,System.Double</value>
+          <value>Periods,System.String</value>
+        </Columns>
+        <CommandTimeout>30</CommandTimeout>
+        <Dictionary isRef="1" />
+        <Key>66de22c8eb4c46059b7f97ab93daca9d</Key>
+        <Name>TrackPeriodsMileageStatistics</Name>
+        <NameInSource>ReportData</NameInSource>
+        <Parameters isList="true" count="0" />
+        <SqlCommand>TrackPeriodsMileageStatistics?{ODataFilter}&amp;timezone='Europe/Moscow'</SqlCommand>
+      </TrackPeriodsMileageStatistics>
+      <TrackPeriodsStatistics Ref="9" type="Stimulsoft.Report.Dictionary.StiODataSource" isKey="true">
+        <Alias>TrackPeriodsStatistics</Alias>
+        <Columns isList="true" count="6">
+          <value>Id,System.Int32</value>
+          <value>UnitId,System.Int32</value>
+          <value>Date,System.DateTimeOffset</value>
+          <value>PeriodType,System.String</value>
+          <value>PeriodBegin,System.DateTimeOffset</value>
+          <value>PeriodEnd,System.DateTimeOffset</value>
+        </Columns>
+        <CommandTimeout>30</CommandTimeout>
+        <Dictionary isRef="1" />
+        <Key>bbae91bd749c4b16acefe428094b8fd9</Key>
+        <Name>TrackPeriodsStatistics</Name>
+        <NameInSource>ReportData</NameInSource>
+        <Parameters isList="true" count="0" />
+        <SqlCommand>TrackPeriodsStatistics?{ODataFilter}&amp;timezone='Europe/Moscow'</SqlCommand>
+      </TrackPeriodsStatistics>
+      <ReportData Ref="10" type="Stimulsoft.Report.Dictionary.StiBusinessObjectSource" isKey="true">
+        <Alias>ReportData</Alias>
+        <Columns isList="true" count="7">
+          <value>Begin,System.DateTime</value>
+          <value>End,System.DateTime</value>
+          <value>CreatedDateUtc,System.DateTime</value>
+          <value>TargetType,System.String</value>
+          <value>Units,Scout.Plugins.Core.Reports.CustomReports.Template.ReportTemplateUnit[]</value>
+          <value>_ID,System.Int32</value>
+          <value>_Current,System.Object</value>
+        </Columns>
+        <Dictionary isRef="1" />
+        <Key>ed0ac1d7ae804fbca1503613c618215f</Key>
+        <Name>ReportData</Name>
+        <NameInSource>ReportData</NameInSource>
+      </ReportData>
+      <ReportData_Units Ref="11" type="Stimulsoft.Report.Dictionary.StiBusinessObjectSource" isKey="true">
+        <Alias>ReportData_Units</Alias>
+        <Columns isList="true" count="6">
+          <value>Id,System.Int32</value>
+          <value>UnitName,System.String</value>
+          <value>StateNumber,System.String</value>
+          <value>_ID,System.Int32</value>
+          <value>_parentID,System.Int32</value>
+          <value>_Current,System.Object</value>
+        </Columns>
+        <Dictionary isRef="1" />
+        <Key>7b65353f0dbb47a3a793b1b9a57ebb87</Key>
+        <Name>ReportData_Units</Name>
+        <NameInSource>ReportData_Units</NameInSource>
+      </ReportData_Units>
+      <MovementAndParkingsStatistics Ref="12" type="Stimulsoft.Report.Dictionary.StiODataSource" isKey="true">
+        <Alias>MovementAndParkingsStatistics</Alias>
+        <Columns isList="true" count="18">
+          <value>Id,System.Int32</value>
+          <value>UnitId,System.Int32</value>
+          <value>Date,System.DateTimeOffset</value>
+          <value>PeriodType,System.String</value>
+          <value>PeriodBegin,System.DateTimeOffset</value>
+          <value>PeriodEnd,System.DateTimeOffset</value>
+          <value>MileageKm,System.Double</value>
+          <value>AverageSpeedKmh,System.Double</value>
+          <value>MinimumSpeedKmh,System.Double</value>
+          <value>MaximumSpeedKmh,System.Double</value>
+          <value>Address,System.String</value>
+          <value>Geofences,System.String</value>
+          <value>Latitude,System.Double</value>
+          <value>Longitude,System.Double</value>
+          <value>EngineIdleDuration,System.String</value>
+          <value>EngineActiveWorkDuration,System.String</value>
+          <value>LastLocationLatitude,System.Double</value>
+          <value>LastLocationLongitude,System.Double</value>
+        </Columns>
+        <CommandTimeout>30</CommandTimeout>
+        <Dictionary isRef="1" />
+        <Key>af75f5ea5f144a899a853dadf1972dc1</Key>
+        <Name>MovementAndParkingsStatistics</Name>
+        <NameInSource>ReportData</NameInSource>
+        <Parameters isList="true" count="0" />
+        <SqlCommand>MovementAndParkingsStatistics?{ODataFilter}&amp;timezone='Europe/Moscow'</SqlCommand>
+      </MovementAndParkingsStatistics>
+    </DataSources>
+    <Relations isList="true" count="2">
+      <ReportData Ref="13" type="DataRelation" isKey="true">
+        <Alias>ReportData</Alias>
+        <ChildColumns isList="true" count="1">
+          <value>_parentID</value>
+        </ChildColumns>
+        <ChildSource isRef="11" />
+        <Dictionary isRef="1" />
+        <Name>ReportData</Name>
+        <NameInSource>ReportData_UnitsRelation</NameInSource>
+        <ParentColumns isList="true" count="1">
+          <value>_ID</value>
+        </ParentColumns>
+        <ParentSource isRef="10" />
+      </ReportData>
+      <ReportData_Units Ref="14" type="DataRelation" isKey="true">
+        <Alias>ReportData_Units</Alias>
+        <ChildColumns isList="true" count="1">
+          <value>UnitId</value>
+        </ChildColumns>
+        <ChildSource isRef="7" />
+        <Dictionary isRef="1" />
+        <Name>ReportData_Units</Name>
+        <NameInSource>Relation</NameInSource>
+        <ParentColumns isList="true" count="1">
+          <value>Id</value>
+        </ParentColumns>
+        <ParentSource isRef="11" />
+      </ReportData_Units>
+    </Relations>
+    <Report isRef="0" />
+    <Resources isList="true" count="1">
+      <value>Name=MotorPeriodMileages, Alias=MotorPeriodMileages</value>
+    </Resources>
+    <Variables isList="true" count="3">
+      <value>,ODataFilter,ODataFilter,,System.String,_x0024_filter_x003D_unitId_x0020_eq_x0020_13881_x0020_and_x0020_date_x0020_ge_x0020_2021-04-07T21:00:00Z_x0020_and_x0020_date_x0020_lt_x0020_2021-04-08T21:00:00Z,False,False,True,False,,,True</value>
+      <value>,Settings_Fuel_EventType,Settings_Fuel_EventType,,System.String,,False,False,False,False</value>
+      <value>,Settings_Fuel_Consumption,Settings_Fuel_Consumption,,System.Double,,False,False,False,False</value>
+    </Variables>
+  </Dictionary>
+  <EngineVersion>EngineV2</EngineVersion>
+  <GlobalizationStrings isList="true" count="0" />
+  <Key>99330bce4492493c86acd9c4831c7e37</Key>
+  <MetaTags isList="true" count="0" />
+  <Pages isList="true" count="1">
+    <Page1 Ref="15" type="Page" isKey="true">
+      <Border>None;[148:167:190];1;Solid;False;4;Black;True</Border>
+      <Brush>[255:255:255]</Brush>
+      <Components isList="true" count="10">
+        <PageHeaderBand1 Ref="16" type="PageHeaderBand" isKey="true">
+          <Brush>Transparent</Brush>
+          <ClientRectangle>0,0.4,19,1.6</ClientRectangle>
+          <Components isList="true" count="2">
+            <ScoutLogoImage Ref="17" type="Image" isKey="true">
+              <Brush>Transparent</Brush>
+              <ClientRectangle>0,0,3.6,0.8</ClientRectangle>
+              <Conditions isList="true" count="0" />
+              <Guid>d632a52fbc004f76b2156bce82cab481</Guid>
+              <ImageBytes>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
+K72f+Oj78H26fGHfFb57fB+u1FrJW9nhB/y8/Pb4PfLX8U/z/z4AE+AfUBXwNNA0MDewN4gSFBXU
+FPQm2Dm4JPhBiG6IMKQ7VDI0MrQxdC7MNaw0bGSV8ar1q66HK4RzwzsjsBGhEQ0Rs6vdVu9dPR5p
+EVkQObRGZ03WmqtrFdYmrT0TJRnFjDoZjY4Oi26K/sD0Y9YxZ2O8YqpjZlgurH2s52xHdhl7imPH
+KeVMxNrFlsZOxtnF7YmbineIL4+f5rpwK7kvEzwTahLmEv0SjyQuJIUltSbjkqOTT/FkeIm8nhSV
+lKyUgVSD1ILUkTSbtL1pM3xvfkM6lL4mvVNAFf1M9Ql1hVuFoxn2GVUZbzNDM09mSWfxsvqy9bN3
+ZE/kuOd8vQ61jrWuO1ctd3Pu6Hqn9bUboA0xG7o3amzM3zi+yWPT0c2EzYmbf8gzySvNe70lbEtX
+vnL+pvyxrR5bmwskCvgFw9tst9VsR23nbu/fYb5j/45PhezCa0UmReVFH4pZxde+Mv2q4quFnbE7
++0ssSw7uwuzi7Rra7bD7aKl0aU7p2B7fPe1l9LLCstd7o/ZeLV9WXrOPsE+4b6TCp6Jzv+b+Xfs/
+VMZX3qlyrmqtVqreUT13gH1g8KDjwZYa5ZqimveHuIfu1nrUttdp15UfxhzOOPy0PrS+92vG140N
+Cg1FDR+P8I6MHA082tNo1djYpNRU0gw3C5unjkUeu/mN6zedLYYtta201qLj4Ljw+LNvo78dOuF9
+ovsk42TLd1rfVbdR2grbofbs9pmO+I6RzvDOgVMrTnV32Xa1fW/0/ZHTaqerzsieKTlLOJt/duFc
+zrnZ86nnpy/EXRjrjup+cHHVxds9AT39l7wvXbnsfvlir1PvuSt2V05ftbl66hrjWsd1y+vtfRZ9
+bT9Y/NDWb9nffsPqRudN65tdA8sHzg46DF645Xrr8m2v29fvrLwzMBQydHc4cnjkLvvu5L2key/v
+Z9yff7DpIfph4SOpR+WPlR7X/aj3Y+uI5ciZUdfRvidBTx6Mscae/5T+04fx/Kfkp+UTqhONk2aT
+p6fcp24+W/1s/Hnq8/npgp+lf65+ofviu18cf+mbWTUz/pL/cuHX4lfyr468Xva6e9Z/9vGb5Dfz
+c4Vv5d8efcd41/s+7P3EfOYH7IeKj3ofuz55f3q4kLyw8Bv3hPP74uYdwgAAAAlwSFlzAAAPYAAA
+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
+rNxWkWEimpYqGGGrttVYEE4T0bSMyVQQTL+x+DcbB+Nt19gm+iGaCsJpIpqWKbaptml+CKbfjEwT
+4TQRTcvMALPw9dkwB5+zm7JMRNMyz4Jg+s23LQiwMNtENC2L4DZYnOW3xLbUgmD6LbMgnCaiaVnu
+ha+vgLthpQXhhEwF0bSsybKshXXnQzgh00Q4TUTTsinAZttW25YME9G0bLcgmpadGSaC6Xd/uolw
+Aj5nD8IuC2J5HoTTRDD99sF+fN2GcJqIpoJwQpqJYPodhiNw1A/hhFQT4TQRTctxOAEnA5zqZnI4
+z+lw6nDqcOpw6nDadDh1OC8eznM6nDqcOpw6nDqcOpw6nDqcOpw6nDqcOpw2HU4dTh1OHU4dTh1O
+HU4dTh1OHU4dTh1OHU4dTh1OHU4dTh1OHU4dTh1OHU4dTh1OHU4dTh1OHU4dTh1OHU4dTh1OHU4d
+Th1OHU4dTh1OHU4dTh1OHU4dTh1OHU4dTh1OHU4dTh1OHc7whlNFU4dTh1OHU4dThxN0OHU4Lx5O
+dcq9FxDN18GDcHoQTg+C6YNwehBNBeH0IJoKoqkgmgrC6UE4PQinB8H0QTg9CKcHwfRBOD0Ipwfh
+9CCcMFpBOD0Ipwfh9CCcHkTTNsqDcHoQTB+E04NwehBMH4TTg2gqCCfUeBBOD6Jpq/YgmD4IpwfR
+VBBMH4TTg3B6EE4PoqkgnFDpQTg9CKcH4YQKD6KpIJwehNODaNrKPYimBZ8jnB5EU0E0FYTTg3B6
+EE7gj6UehNODYPognB6EE4YpCCeUKIimgnB6EEwfhNODcEKRgnB6EE4oVBBOD8LpQTg9CKcH0VQQ
+Tg/CCQUKgumDcMIQBeH0IJyQ70E4PQinB9FUEE4Pomkb5EE0Le0HKginB+H0IJwwQEE4PYimgnB6
+EE7opyCcHkRTQTghT0E4PQgn9FEQTg+iqSCYPoimgmhaknt5EE4PoqkgmD4IpwfRtHX3IJg+CKcH
+4fQgnB5EU0E4IVtBNC0pWR5EU0E4PQgnZHgQTg/C6UE4PQgnpHkQTB+E04NwQjcPwulBNC1dbF2h
+mwXRtKTbMiAzVUE4PQinB8H0625BOD2IpqWXrU+aJQ/6WhBOD6JpGZDmQTg9iKZlMOTbhtgKYKgF
+0bQUQ4lXhoJg+pXh36zcVpHhQTQtVTDCVm2rsSCcHkTTMiZTQTD9xuLfbByMt11jm+iHaCoIpwfR
+tEyxTbVN80Mw/WZkehBOD6JpmRlgFr4+G+bgc3ZTlgfRtMyzIJh+820LAizM9iCalkVwGyzO8lti
+W2pBMP2WWRBOD6JpWe6Fr6+Au2GlBeGETAXRtKzJsqyFdedDOCHTg3B6EE3LpgCbbVttWzI8iKZl
+uwXRtOzM8CCYfvenexBOwOfsQdhlQSzPg3B6EEy/fbAfX7chnB5EU0E4Ic2DYPodhiNw1A/hhFQP
+wulBNC3H4QSc9Hn9i1PdXvj/kq6cdvRviCQAAAAASUVORK5CYII=</ImageBytes>
+              <Margins>0,0,0,0</Margins>
+              <Name>ScoutLogoImage</Name>
+              <Page isRef="15" />
+              <Parent isRef="16" />
+              <Smoothing>False</Smoothing>
+              <Stretch>True</Stretch>
+            </ScoutLogoImage>
+            <WebLabel Ref="18" type="Text" isKey="true">
+              <Brush>Transparent</Brush>
+              <ClientRectangle>16.6,1,2.4,0.4</ClientRectangle>
+              <Conditions isList="true" count="0" />
+              <Font>Arial,8</Font>
+              <Guid>1fed3283325946eda00abb7ebdf19f89</Guid>
+              <HorAlignment>Right</HorAlignment>
+              <Margins>0,0,0,0</Margins>
+              <Name>WebLabel</Name>
+              <Page isRef="15" />
+              <Parent isRef="16" />
+              <Text>www.scout-gps.ru</Text>
+              <TextBrush>Black</TextBrush>
+              <Type>Expression</Type>
+              <VertAlignment>Center</VertAlignment>
+            </WebLabel>
+          </Components>
+          <Conditions isList="true" count="0" />
+          <Name>PageHeaderBand1</Name>
+          <Page isRef="15" />
+          <Parent isRef="15" />
+        </PageHeaderBand1>
+        <PageFooterBand1 Ref="19" type="PageFooterBand" isKey="true">
+          <Brush>Transparent</Brush>
+          <ClientRectangle>0,32.44,19,0.8</ClientRectangle>
+          <Components isList="true" count="2">
+            <Text47 Ref="20" type="Text" isKey="true">
+              <Border>AdvBlack;2;None;Black;1;None;Black;2;None;Black;1;None;False;4;Black</Border>
+              <Brush>Transparent</Brush>
+              <ClientRectangle>0.2,0.1,3.4,0.6</ClientRectangle>
+              <Conditions isList="true" count="0" />
+              <Font>Arial,10</Font>
+              <Margins>0,0,0,0</Margins>
+              <Name>Text47</Name>
+              <Page isRef="15" />
+              <Parent isRef="19" />
+              <Text>Движения и стоянки</Text>
+              <TextBrush>[0:0:0]</TextBrush>
+              <Type>Expression</Type>
+              <VertAlignment>Center</VertAlignment>
+            </Text47>
+            <Text48 Ref="21" type="Text" isKey="true">
+              <Border>AdvBlack;2;None;Black;1;None;Black;2;None;Black;1;None;False;4;Black</Border>
+              <Brush>Transparent</Brush>
+              <ClientRectangle>17.4,0.1,1.4,0.6</ClientRectangle>
+              <Conditions isList="true" count="0" />
+              <Font>Arial,10</Font>
+              <Margins>0,0,0,0</Margins>
+              <Name>Text48</Name>
+              <Page isRef="15" />
+              <Parent isRef="19" />
+              <Text>{PageNumberThrough}/{TotalPageCountThrough}</Text>
+              <TextBrush>[0:0:0]</TextBrush>
+              <Type>Expression</Type>
+              <VertAlignment>Center</VertAlignment>
+            </Text48>
+          </Components>
+          <Conditions isList="true" count="0" />
+          <Name>PageFooterBand1</Name>
+          <Page isRef="15" />
+          <Parent isRef="15" />
+        </PageFooterBand1>
+        <GroupHeaderBand3 Ref="22" type="GroupHeaderBand" isKey="true">
+          <Brush>Transparent</Brush>
+          <ClientRectangle>0,2.8,19,3.2</ClientRectangle>
+          <Components isList="true" count="9">
+            <Text5 Ref="23" type="Text" isKey="true">
+              <Border>All;Black;1;Solid;False;4;Black</Border>
+              <Brush>Transparent</Brush>
+              <ClientRectangle>7,2,12,0.6</ClientRectangle>
+              <Conditions isList="true" count="0" />
+              <Font>Arial,11.25,Bold,Point,False,204</Font>
+              <Guid>95da1b6229504893a1a2e166cebb5de8</Guid>
+              <Margins>10,0,0,0</Margins>
+              <Name>Text5</Name>
+              <Page isRef="15" />
+              <Parent isRef="22" />
+              <TextBrush>Black</TextBrush>
+              <Type>Expression</Type>
+              <VertAlignment>Center</VertAlignment>
+            </Text5>
+            <Text7 Ref="24" type="Text" isKey="true">
+              <Border>All;Black;1;Solid;False;4;Black</Border>
+              <Brush>Transparent</Brush>
+              <ClientRectangle>0,2,7,0.6</ClientRectangle>
+              <Conditions isList="true" count="0" />
+              <Font>Arial,11.25,Regular,Point,False,204</Font>
+              <Guid>1c54836e8fa04e7aad33a49133ce367e</Guid>
+              <Margins>10,0,0,0</Margins>
+              <Name>Text7</Name>
+              <Page isRef="15" />
+              <Parent isRef="22" />
+              <Text>Пользователь</Text>
+              <TextBrush>Black</TextBrush>
+              <Type>Expression</Type>
+              <VertAlignment>Center</VertAlignment>
+            </Text7>
+            <Text8 Ref="25" type="Text" isKey="true">
+              <Border>All;Black;1;Solid;False;4;Black</Border>
+              <Brush>Transparent</Brush>
+              <ClientRectangle>0,1.4,7,0.6</ClientRectangle>
+              <Conditions isList="true" count="0" />
+              <Font>Arial,11.25,Regular,Point,False,204</Font>
+              <Guid>0d0f0b47782a42fc816f3918e10caa8b</Guid>
+              <Margins>10,0,0,0</Margins>
+              <Name>Text8</Name>
+              <Page isRef="15" />
+              <Parent isRef="22" />
+              <Text>Период отчета</Text>
+              <TextBrush>Black</TextBrush>
+              <Type>Expression</Type>
+              <VertAlignment>Center</VertAlignment>
+            </Text8>
+            <Text10 Ref="26" type="Text" isKey="true">
+              <Border>All;Black;1;Solid;False;4;Black</Border>
+              <Brush>Transparent</Brush>
+              <ClientRectangle>0,0.8,7,0.6</ClientRectangle>
+              <Conditions isList="true" count="0" />
+              <Font>Arial,11.25,Regular,Point,False,204</Font>
+              <Guid>63077e4335c842faa70c29f72f7e3aab</Guid>
+              <Margins>10,0,0,0</Margins>
+              <Name>Text10</Name>
+              <Page isRef="15" />
+              <Parent isRef="22" />
+              <Text>Объект</Text>
+              <TextBrush>Black</TextBrush>
+              <Type>Expression</Type>
+              <VertAlignment>Center</VertAlignment>
+            </Text10>
+            <Text11 Ref="27" type="Text" isKey="true">
+              <Border>All;Black;1;Solid;False;4;Black</Border>
+              <Brush>Transparent</Brush>
+              <ClientRectangle>7,0.8,12,0.6</ClientRectangle>
+              <Conditions isList="true" count="0" />
+              <Font>Arial,11.25,Regular,Point,False,204</Font>
+              <Guid>19888fef58974c978f19253c37845fe8</Guid>
+              <Margins>10,0,0,0</Margins>
+              <Name>Text11</Name>
+              <Page isRef="15" />
+              <Parent isRef="22" />
+              <Text>{MovementAndParkingsStatistics.UnitId}</Text>
+              <TextBrush>Black</TextBrush>
+              <Type>DataColumn</Type>
+              <VertAlignment>Center</VertAlignment>
+            </Text11>
+            <Text12 Ref="28" type="Text" isKey="true">
+              <Border>All;Black;1;Solid;False;4;Black</Border>
+              <Brush>Transparent</Brush>
+              <ClientRectangle>7,1.4,12,0.6</ClientRectangle>
+              <Conditions isList="true" count="0" />
+              <Font>Arial,11.25</Font>
+              <Guid>6b7bf5beee4e4e46a807ebf11a80d486</Guid>
+              <Margins>10,0,0,0</Margins>
+              <Name>Text12</Name>
+              <Page isRef="15" />
+              <Parent isRef="22" />
+              <Text>с {ReportData.Begin} по {ReportData.End}</Text>
+              <TextBrush>Black</TextBrush>
+              <Type>Expression</Type>
+              <VertAlignment>Center</VertAlignment>
+            </Text12>
+            <Text13 Ref="29" type="Text" isKey="true">
+              <Border>All;Black;1;Solid;False;4;Black</Border>
+              <Brush>Transparent</Brush>
+              <ClientRectangle>7,2.6,12,0.6</ClientRectangle>
+              <Conditions isList="true" count="0" />
+              <Font>Arial,11.25</Font>
+              <Guid>b76f93d641ae4971b587ef362016b192</Guid>
+              <Margins>10,0,0,0</Margins>
+              <Name>Text13</Name>
+              <Page isRef="15" />
+              <Parent isRef="22" />
+              <Text>{Today.ToString("dd.MM.yyyy")}</Text>
+              <TextBrush>Black</TextBrush>
+              <Type>Expression</Type>
+              <VertAlignment>Center</VertAlignment>
+            </Text13>
+            <Text14 Ref="30" type="Text" isKey="true">
+              <Border>All;Black;1;Solid;False;4;Black</Border>
+              <Brush>Transparent</Brush>
+              <ClientRectangle>0,2.6,7,0.6</ClientRectangle>
+              <Conditions isList="true" count="0" />
+              <Font>Arial,11.25,Regular,Point,False,204</Font>
+              <Guid>c015cf08ba6a4dcfa969a8e22f1eed32</Guid>
+              <Margins>10,0,0,0</Margins>
+              <Name>Text14</Name>
+              <Page isRef="15" />
+              <Parent isRef="22" />
+              <Text>Время создания отчета</Text>
+              <TextBrush>Black</TextBrush>
+              <Type>Expression</Type>
+              <VertAlignment>Center</VertAlignment>
+            </Text14>
+            <Text3 Ref="31" type="Text" isKey="true">
+              <Border>AdvBlack;2;Solid;Black;1;Solid;Black;2;Solid;Black;2;Solid;False;4;Black</Border>
+              <Brush>[216:216:216]</Brush>
+              <ClientRectangle>0,0,19,0.8</ClientRectangle>
+              <Conditions isList="true" count="0" />
+              <Font>Arial,14,Bold</Font>
+              <HorAlignment>Center</HorAlignment>
+              <Margins>0,0,0,0</Margins>
+              <Name>Text3</Name>
+              <Page isRef="15" />
+              <Parent isRef="22" />
+              <Text>Движения и стоянки</Text>
+              <TextBrush>Black</TextBrush>
+              <Type>Expression</Type>
+              <VertAlignment>Center</VertAlignment>
+            </Text3>
+          </Components>
+          <Condition>{MovementAndParkingsStatistics.UnitId}</Condition>
+          <Conditions isList="true" count="0" />
+          <Name>GroupHeaderBand3</Name>
+          <NewPageBefore>True</NewPageBefore>
+          <Page isRef="15" />
+          <Parent isRef="15" />
+        </GroupHeaderBand3>
+        <GroupHeaderBand4 Ref="32" type="GroupHeaderBand" isKey="true">
+          <Brush>Transparent</Brush>
+          <ClientRectangle>0,6.8,19,0.2</ClientRectangle>
+          <Components isList="true" count="0" />
+          <Condition>{MovementAndParkingsStatistics.UnitId}</Condition>
+          <Conditions isList="true" count="0" />
+          <Name>GroupHeaderBand4</Name>
+          <Page isRef="15" />
+          <Parent isRef="15" />
+        </GroupHeaderBand4>
+        <GroupHeaderBand2 Ref="33" type="GroupHeaderBand" isKey="true">
+          <Brush>Transparent</Brush>
+          <ClientRectangle>0,7.8,19,1.8</ClientRectangle>
+          <Components isList="true" count="11">
+            <Text1 Ref="34" type="Text" isKey="true">
+              <Border>All;Black;1;Solid;False;4;Black</Border>
+              <Brush>[255:192:0]</Brush>
+              <ClientRectangle>0,0,19,0.6</ClientRectangle>
+              <Conditions isList="true" count="0" />
+              <Font>Arial,11.25,Bold</Font>
+              <HorAlignment>Center</HorAlignment>
+              <Margins>0,0,0,0</Margins>
+              <Name>Text1</Name>
+              <Page isRef="15" />
+              <Parent isRef="33" />
+              <Text>Движения и стоянки</Text>
+              <TextBrush>[0:0:0]</TextBrush>
+              <Type>Expression</Type>
+              <VertAlignment>Center</VertAlignment>
+            </Text1>
+            <Text4 Ref="35" type="Text" isKey="true">
+              <Border>All;Black;1;Solid;False;4;Black</Border>
+              <Brush>[242:242:242]</Brush>
+              <ClientRectangle>0,0.6,1,1.2</ClientRectangle>
+              <Conditions isList="true" count="0" />
+              <Font>Arial,8,Bold</Font>
+              <HorAlignment>Center</HorAlignment>
+              <Margins>0,0,0,0</Margins>
+              <Name>Text4</Name>
+              <Page isRef="15" />
+              <Parent isRef="33" />
+              <Text>№</Text>
+              <TextBrush>[0:0:0]</TextBrush>
+              <Type>Expression</Type>
+              <VertAlignment>Center</VertAlignment>
+            </Text4>
+            <Text6 Ref="36" type="Text" isKey="true">
+              <Border>All;Black;1;Solid;False;4;Black</Border>
+              <Brush>[242:242:242]</Brush>
+              <ClientRectangle>1,0.6,2.2,1.2</ClientRectangle>
+              <Conditions isList="true" count="0" />
+              <Font>Arial,8,Bold</Font>
+              <HorAlignment>Center</HorAlignment>
+              <Margins>0,0,0,0</Margins>
+              <Name>Text6</Name>
+              <Page isRef="15" />
+              <Parent isRef="33" />
+              <Text>Действие</Text>
+              <TextBrush>[0:0:0]</TextBrush>
+              <Type>Expression</Type>
+              <VertAlignment>Center</VertAlignment>
+            </Text6>
+            <Text9 Ref="37" type="Text" isKey="true">
+              <Border>All;Black;1;Solid;False;4;Black</Border>
+              <Brush>[242:242:242]</Brush>
+              <ClientRectangle>3.2,0.6,2.2,1.2</ClientRectangle>
+              <Conditions isList="true" count="0" />
+              <Font>Arial,8,Bold</Font>
+              <HorAlignment>Center</HorAlignment>
+              <Margins>0,0,0,0</Margins>
+              <Name>Text9</Name>
+              <Page isRef="15" />
+              <Parent isRef="33" />
+              <Text>Начало</Text>
+              <TextBrush>Black</TextBrush>
+              <Type>Expression</Type>
+              <VertAlignment>Center</VertAlignment>
+            </Text9>
+            <Text15 Ref="38" type="Text" isKey="true">
+              <Border>All;Black;1;Solid;False;4;Black</Border>
+              <Brush>[242:242:242]</Brush>
+              <ClientRectangle>5.4,0.6,2.2,1.2</ClientRectangle>
+              <Conditions isList="true" count="0" />
+              <Font>Arial,8,Bold</Font>
+              <Guid>f02373150756498aa2c70784ca581891</Guid>
+              <HorAlignment>Center</HorAlignment>
+              <Margins>0,0,0,0</Margins>
+              <Name>Text15</Name>
+              <Page isRef="15" />
+              <Parent isRef="33" />
+              <Text>Конец</Text>
+              <TextBrush>Black</TextBrush>
+              <Type>Expression</Type>
+              <VertAlignment>Center</VertAlignment>
+            </Text15>
+            <Text16 Ref="39" type="Text" isKey="true">
+              <Border>All;Black;1;Solid;False;4;Black</Border>
+              <Brush>[242:242:242]</Brush>
+              <ClientRectangle>7.6,0.6,2.2,1.2</ClientRectangle>
+              <Conditions isList="true" count="0" />
+              <Font>Arial,8,Bold</Font>
+              <Guid>0dab5f021efb4b959a05ffd08d26fcf8</Guid>
+              <HorAlignment>Center</HorAlignment>
+              <Margins>0,0,0,0</Margins>
+              <Name>Text16</Name>
+              <Page isRef="15" />
+              <Parent isRef="33" />
+              <Text>Длительность</Text>
+              <TextBrush>Black</TextBrush>
+              <Type>Expression</Type>
+              <VertAlignment>Center</VertAlignment>
+            </Text16>
+            <Text17 Ref="40" type="Text" isKey="true">
+              <Border>All;Black;1;Solid;False;4;Black</Border>
+              <Brush>[242:242:242]</Brush>
+              <ClientRectangle>9.8,0.6,2,1.2</ClientRectangle>
+              <Conditions isList="true" count="0" />
+              <Font>Arial,8,Bold</Font>
+              <Guid>8f3cfa40e29847469a5bd79d8e5a0559</Guid>
+              <HorAlignment>Center</HorAlignment>
+              <Margins>0,0,0,0</Margins>
+              <Name>Text17</Name>
+              <Page isRef="15" />
+              <Parent isRef="33" />
+              <Text>Работа двигателя на ХХ</Text>
+              <TextBrush>Black</TextBrush>
+              <TextOptions>,,,,WordWrap=True,A=0</TextOptions>
+              <Type>Expression</Type>
+              <VertAlignment>Center</VertAlignment>
+            </Text17>
+            <Text18 Ref="41" type="Text" isKey="true">
+              <Border>All;Black;1;Solid;False;4;Black</Border>
+              <Brush>[242:242:242]</Brush>
+              <ClientRectangle>11.8,0.6,2,1.2</ClientRectangle>
+              <Conditions isList="true" count="0" />
+              <Font>Arial,8,Bold</Font>
+              <Guid>f351a05b5c10422dbe34a05abf089fcb</Guid>
+              <HorAlignment>Center</HorAlignment>
+              <Margins>0,0,0,0</Margins>
+              <Name>Text18</Name>
+              <Page isRef="15" />
+              <Parent isRef="33" />
+              <Text>Работа двигателя под нагрузкой</Text>
+              <TextBrush>Black</TextBrush>
+              <TextOptions>,,,,WordWrap=True,A=0</TextOptions>
+              <Type>Expression</Type>
+              <VertAlignment>Center</VertAlignment>
+            </Text18>
+            <Text19 Ref="42" type="Text" isKey="true">
+              <Border>All;Black;1;Solid;False;4;Black</Border>
+              <Brush>[242:242:242]</Brush>
+              <ClientRectangle>13.8,0.6,5.2,0.6</ClientRectangle>
+              <Conditions isList="true" count="0" />
+              <Font>Arial,8,Bold</Font>
+              <HorAlignment>Center</HorAlignment>
+              <Margins>0,0,0,0</Margins>
+              <Name>Text19</Name>
+              <Page isRef="15" />
+              <Parent isRef="33" />
+              <Text>Место стоянки (название геозоны)</Text>
+              <TextBrush>[0:0:0]</TextBrush>
+              <Type>Expression</Type>
+              <VertAlignment>Center</VertAlignment>
+            </Text19>
+            <Text20 Ref="43" type="Text" isKey="true">
+              <Border>All;Black;1;Solid;False;4;Black</Border>
+              <Brush>[242:242:242]</Brush>
+              <ClientRectangle>13.8,1.2,2.6,0.6</ClientRectangle>
+              <Conditions isList="true" count="0" />
+              <Font>Arial,8,Bold</Font>
+              <HorAlignment>Center</HorAlignment>
+              <Margins>0,0,0,0</Margins>
+              <Name>Text20</Name>
+              <Page isRef="15" />
+              <Parent isRef="33" />
+              <Text>Средняя скорость</Text>
+              <TextBrush>[0:0:0]</TextBrush>
+              <Type>Expression</Type>
+              <VertAlignment>Center</VertAlignment>
+            </Text20>
+            <Text21 Ref="44" type="Text" isKey="true">
+              <Border>All;Black;1;Solid;False;4;Black</Border>
+              <Brush>[242:242:242]</Brush>
+              <ClientRectangle>16.4,1.2,2.6,0.6</ClientRectangle>
+              <Conditions isList="true" count="0" />
+              <Font>Arial,8,Bold</Font>
+              <Guid>44a2423528064c6e8a3114612231e76a</Guid>
+              <HorAlignment>Center</HorAlignment>
+              <Margins>0,0,0,0</Margins>
+              <Name>Text21</Name>
+              <Page isRef="15" />
+              <Parent isRef="33" />
+              <Text>Пробег</Text>
+              <TextBrush>[0:0:0]</TextBrush>
+              <Type>Expression</Type>
+              <VertAlignment>Center</VertAlignment>
+            </Text21>
+          </Components>
+          <Condition>{MovementAndParkingsStatistics.UnitId}</Condition>
+          <Conditions isList="true" count="0" />
+          <Name>GroupHeaderBand2</Name>
+          <NewPageBefore>True</NewPageBefore>
+          <Page isRef="15" />
+          <Parent isRef="15" />
+          <PrintOnAllPages>True</PrintOnAllPages>
+        </GroupHeaderBand2>
+        <GroupHeaderBand1 Ref="45" type="GroupHeaderBand" isKey="true">
+          <Brush>Transparent</Brush>
+          <ClientRectangle>0,10.4,19,0.6</ClientRectangle>
+          <Components isList="true" count="1">
+            <Text50 Ref="46" type="Text" isKey="true">
+              <Border>AdvBlack;2;Solid;Black;1;Solid;Black;2;Solid;Black;2;Solid;False;4;Black</Border>
+              <Brush>[198:191:216]</Brush>
+              <ClientRectangle>0,0,19,0.6</ClientRectangle>
+              <Conditions isList="true" count="0" />
+              <Font>Arial,7,Bold</Font>
+              <Margins>0,0,0,0</Margins>
+              <Name>Text50</Name>
+              <Page isRef="15" />
+              <Parent isRef="45" />
+              <Text>   {MovementAndParkingsStatistics.PeriodBegin.ToString("dd.MM.yyyy")}</Text>
+              <TextBrush>Black</TextBrush>
+              <Type>Expression</Type>
+              <VertAlignment>Center</VertAlignment>
+            </Text50>
+          </Components>
+          <Condition>{MovementAndParkingsStatistics.UnitId}</Condition>
+          <Conditions isList="true" count="0" />
+          <Name>GroupHeaderBand1</Name>
+          <Page isRef="15" />
+          <Parent isRef="15" />
+        </GroupHeaderBand1>
+        <DataMovementAndParkingsStatistics Ref="47" type="DataBand" isKey="true">
+          <Brush>Transparent</Brush>
+          <BusinessObjectGuid isNull="true" />
+          <ClientRectangle>0,11.8,19,0.6</ClientRectangle>
+          <Components isList="true" count="8">
+            <DataMovementAndParkingsStatistics_PeriodType Ref="48" type="Text" isKey="true">
+              <Border>All;Black;1;Solid;False;4;Black</Border>
+              <Brush>Transparent</Brush>
+              <CanGrow>True</CanGrow>
+              <ClientRectangle>1,0,2.2,0.6</ClientRectangle>
+              <Conditions isList="true" count="0" />
+              <Font>Arial,8</Font>
+              <HorAlignment>Center</HorAlignment>
+              <Margins>0,0,0,0</Margins>
+              <Name>DataMovementAndParkingsStatistics_PeriodType</Name>
+              <Page isRef="15" />
+              <Parent isRef="47" />
+              <Text>{IIF(MovementAndParkingsStatistics.PeriodType == "Movement", "Движение",
+IIF(MovementAndParkingsStatistics.PeriodType == "Parking", "Стоянка",
+IIF(MovementAndParkingsStatistics.PeriodType == "Break", "Разрыв", "---")))}</Text>
+              <TextBrush>Black</TextBrush>
+              <TextOptions>,,,,WordWrap=True,A=0</TextOptions>
+              <Type>Expression</Type>
+              <VertAlignment>Center</VertAlignment>
+            </DataMovementAndParkingsStatistics_PeriodType>
+            <Text22 Ref="49" type="Text" isKey="true">
+              <Border>All;Black;1;Solid;False;4;Black</Border>
+              <Brush>[0:255:255:255]</Brush>
+              <ClientRectangle>0,0,1,0.6</ClientRectangle>
+              <Conditions isList="true" count="0" />
+              <Font>Arial,8</Font>
+              <Guid>d81df359b674498e8adb46c48e3198f4</Guid>
+              <HorAlignment>Center</HorAlignment>
+              <Margins>0,0,0,0</Margins>
+              <Name>Text22</Name>
+              <Page isRef="15" />
+              <Parent isRef="47" />
+              <Text>{Line}</Text>
+              <TextBrush>[0:0:0]</TextBrush>
+              <Type>SystemVariables</Type>
+              <VertAlignment>Center</VertAlignment>
+            </Text22>
+            <Text2 Ref="50" type="Text" isKey="true">
+              <Border>All;Black;1;Solid;False;4;Black</Border>
+              <Brush>Transparent</Brush>
+              <ClientRectangle>3.2,0,2.2,0.6</ClientRectangle>
+              <Conditions isList="true" count="0" />
+              <Font>Arial,8</Font>
+              <HorAlignment>Center</HorAlignment>
+              <Margins>0,0,0,0</Margins>
+              <Name>Text2</Name>
+              <Page isRef="15" />
+              <Parent isRef="47" />
+              <Text>{MovementAndParkingsStatistics.PeriodBegin.ToString("HH:mm")}</Text>
+              <TextBrush>Black</TextBrush>
+              <Type>Expression</Type>
+              <VertAlignment>Center</VertAlignment>
+            </Text2>
+            <Text23 Ref="51" type="Text" isKey="true">
+              <Border>All;Black;1;Solid;False;4;Black</Border>
+              <Brush>Transparent</Brush>
+              <ClientRectangle>5.4,0,2.2,0.6</ClientRectangle>
+              <Conditions isList="true" count="0" />
+              <Font>Arial,8</Font>
+              <HorAlignment>Center</HorAlignment>
+              <Margins>0,0,0,0</Margins>
+              <Name>Text23</Name>
+              <Page isRef="15" />
+              <Parent isRef="47" />
+              <Text>{MovementAndParkingsStatistics.PeriodEnd.ToString("HH:mm")}</Text>
+              <TextBrush>Black</TextBrush>
+              <Type>Expression</Type>
+              <VertAlignment>Center</VertAlignment>
+            </Text23>
+            <Text49 Ref="52" type="Text" isKey="true">
+              <Border>All;Black;1;Solid;False;4;Black</Border>
+              <Brush>[0:255:255:255]</Brush>
+              <ClientRectangle>7.6,0,2.2,0.6</ClientRectangle>
+              <Conditions isList="true" count="0" />
+              <Font>Arial,8</Font>
+              <Guid>be7bfc6b29d04105ac95bac9bc66e666</Guid>
+              <HorAlignment>Center</HorAlignment>
+              <Margins>0,0,0,0</Margins>
+              <Name>Text49</Name>
+              <Page isRef="15" />
+              <Parent isRef="47" />
+              <Text>{IIF((MovementAndParkingsStatistics.PeriodType == "Movement"),
+DateDiff(DateTime.Parse(MovementAndParkingsStatistics.PeriodEnd.ToString()),DateTime.Parse(MovementAndParkingsStatistics.PeriodBegin.ToString())),
+DateDiff(DateTime.Parse(MovementAndParkingsStatistics.PeriodEnd.ToString()),DateTime.Parse(MovementAndParkingsStatistics.PeriodBegin.ToString())))}</Text>
+              <TextBrush>Black</TextBrush>
+              <Type>Expression</Type>
+              <VertAlignment>Center</VertAlignment>
+            </Text49>
+            <Text59 Ref="53" type="Text" isKey="true">
+              <Border>All;Black;1;Solid;False;4;Black</Border>
+              <Brush>Transparent</Brush>
+              <ClientRectangle>9.8,0,2,0.6</ClientRectangle>
+              <Conditions isList="true" count="0" />
+              <Font>Arial,8</Font>
+              <HorAlignment>Center</HorAlignment>
+              <Margins>0,0,0,0</Margins>
+              <Name>Text59</Name>
+              <Page isRef="15" />
+              <Parent isRef="47" />
+              <Text>{TimeSpan.Parse(MovementAndParkingsStatistics.EngineIdleDuration)}</Text>
+              <TextBrush>Black</TextBrush>
+              <TextFormat Ref="54" type="TimeFormat" isKey="true">
+                <StringFormat>HH:mm</StringFormat>
+              </TextFormat>
+              <Type>Expression</Type>
+              <VertAlignment>Center</VertAlignment>
+            </Text59>
+            <Text60 Ref="55" type="Text" isKey="true">
+              <Border>All;Black;1;Solid;False;4;Black</Border>
+              <Brush>Transparent</Brush>
+              <ClientRectangle>11.8,0,2,0.6</ClientRectangle>
+              <Conditions isList="true" count="0" />
+              <Font>Arial,8</Font>
+              <HorAlignment>Center</HorAlignment>
+              <Margins>0,0,0,0</Margins>
+              <Name>Text60</Name>
+              <Page isRef="15" />
+              <Parent isRef="47" />
+              <Text>{MovementAndParkingsStatistics.EngineActiveWorkDuration}</Text>
+              <TextBrush>Black</TextBrush>
+              <Type>Expression</Type>
+              <VertAlignment>Center</VertAlignment>
+            </Text60>
+            <Panel1 Ref="56" type="Panel" isKey="true">
+              <Brush>Transparent</Brush>
+              <ClientRectangle>13.8,0,5.2,0.6</ClientRectangle>
+              <Components isList="true" count="3">
+                <Text61 Ref="57" type="Text" isKey="true">
+                  <Border>All;Black;1;Solid;False;4;Black</Border>
+                  <Brush>Transparent</Brush>
+                  <ClientRectangle>0,0,5.2,0.6</ClientRectangle>
+                  <Conditions isList="true" count="1">
+                    <value>MovementAndParkingsStatistics.PeriodType,NotEqualTo,Parking,,String,[255:0:0],[0:255:255:255],Arial_x002C_8,False,False,,,None</value>
+                  </Conditions>
+                  <DockStyle>Top</DockStyle>
+                  <Font>Arial,8</Font>
+                  <HorAlignment>Center</HorAlignment>
+                  <Margins>0,0,0,0</Margins>
+                  <Name>Text61</Name>
+                  <Page isRef="15" />
+                  <Parent isRef="56" />
+                  <Text>{MovementAndParkingsStatistics.Address}</Text>
+                  <TextBrush>Black</TextBrush>
+                  <Type>Expression</Type>
+                  <VertAlignment>Center</VertAlignment>
+                </Text61>
+                <Text63 Ref="58" type="Text" isKey="true">
+                  <Border>All;Black;1;Solid;False;4;Black</Border>
+                  <Brush>Transparent</Brush>
+                  <ClientRectangle>0,0,2.6,0.6</ClientRectangle>
+                  <Conditions isList="true" count="1">
+                    <value>MovementAndParkingsStatistics.PeriodType,EqualTo,Parking,,String,[255:0:0],[0:255:255:255],Arial_x002C_8,False,False,,,None</value>
+                  </Conditions>
+                  <Font>Arial,8</Font>
+                  <HorAlignment>Center</HorAlignment>
+                  <Margins>0,0,0,0</Margins>
+                  <Name>Text63</Name>
+                  <Page isRef="15" />
+                  <Parent isRef="56" />
+                  <Text>{IIF(MovementAndParkingsStatistics.PeriodType == "Movement" || MovementAndParkingsStatistics.PeriodType == "Break", Round(MovementAndParkingsStatistics.AverageSpeedKmh), MovementAndParkingsStatistics.AverageSpeedKmh)} км/ч</Text>
+                  <TextBrush>Black</TextBrush>
+                  <Type>Expression</Type>
+                  <VertAlignment>Center</VertAlignment>
+                </Text63>
+                <Text62 Ref="59" type="Text" isKey="true">
+                  <Border>All;Black;1;Solid;False;4;Black</Border>
+                  <Brush>Transparent</Brush>
+                  <ClientRectangle>2.6,0,2.6,0.6</ClientRectangle>
+                  <Conditions isList="true" count="1">
+                    <value>MovementAndParkingsStatistics.PeriodType,EqualTo,Parking,,String,[255:0:0],[0:255:255:255],Arial_x002C_8,False,False,,,None</value>
+                  </Conditions>
+                  <Font>Arial,8</Font>
+                  <Guid>f76381d8b5874d218ed2ef64b392d160</Guid>
+                  <HorAlignment>Center</HorAlignment>
+                  <Margins>0,0,0,0</Margins>
+                  <Name>Text62</Name>
+                  <Page isRef="15" />
+                  <Parent isRef="56" />
+                  <Text>{IIF(MovementAndParkingsStatistics.PeriodType == "Movement" || MovementAndParkingsStatistics.PeriodType == "Break", Round(MovementAndParkingsStatistics.MileageKm), MovementAndParkingsStatistics.MileageKm)} км</Text>
+                  <TextBrush>Black</TextBrush>
+                  <Type>Expression</Type>
+                  <VertAlignment>Center</VertAlignment>
+                </Text62>
+              </Components>
+              <Conditions isList="true" count="0" />
+              <Name>Panel1</Name>
+              <Page isRef="15" />
+              <Parent isRef="47" />
+            </Panel1>
+          </Components>
+          <Conditions isList="true" count="0" />
+          <DataRelationName isNull="true" />
+          <DataSourceName>MovementAndParkingsStatistics</DataSourceName>
+          <EvenStyle>Коллекция1_Данные1_Стиль четных строк</EvenStyle>
+          <Filters isList="true" count="0" />
+          <Name>DataMovementAndParkingsStatistics</Name>
+          <OddStyle>Коллекция1_Данные1_Стиль нечетных строк</OddStyle>
+          <Page isRef="15" />
+          <Parent isRef="15" />
+          <Sort isList="true" count="2">
+            <value>ASC</value>
+            <value>PeriodBegin</value>
+          </Sort>
+        </DataMovementAndParkingsStatistics>
+        <GroupFooterBand1 Ref="60" type="GroupFooterBand" isKey="true">
+          <Brush>Transparent</Brush>
+          <ClientRectangle>0,13.2,19,0.6</ClientRectangle>
+          <Components isList="true" count="8">
+            <Text65 Ref="61" type="Text" isKey="true">
+              <Border>AdvBlack;2;Solid;Black;1;Solid;Black;2;Solid;Black;2;Solid;False;4;Black</Border>
+              <Brush>[216:216:216]</Brush>
+              <ClientRectangle>0,0,3.2,0.6</ClientRectangle>
+              <Conditions isList="true" count="0" />
+              <Font>Arial,8,Bold</Font>
+              <Guid>f338a71d6b5343fabf2c5633fbd9366a</Guid>
+              <Margins>0,0,0,0</Margins>
+              <Name>Text65</Name>
+              <Page isRef="15" />
+              <Parent isRef="60" />
+              <Text>   Итого за смену:</Text>
+              <TextBrush>Black</TextBrush>
+              <Type>Expression</Type>
+              <VertAlignment>Center</VertAlignment>
+            </Text65>
+            <Text66 Ref="62" type="Text" isKey="true">
+              <Border>AdvBlack;2;Solid;Black;1;Solid;Black;2;Solid;Black;2;Solid;False;4;Black</Border>
+              <Brush>[216:216:216]</Brush>
+              <ClientRectangle>3.2,0,2.2,0.6</ClientRectangle>
+              <Conditions isList="true" count="0" />
+              <Font>Arial,8,Bold</Font>
+              <Guid>f123d2dd91c44cf4a21b773b3f940017</Guid>
+              <HorAlignment>Center</HorAlignment>
+              <Margins>0,0,0,0</Margins>
+              <Name>Text66</Name>
+              <Page isRef="15" />
+              <Parent isRef="60" />
+              <Text>{FirstIf(MovementAndParkingsStatistics.PeriodBegin.ToString("HH:mm"),MovementAndParkingsStatistics.PeriodType == "Movement")}</Text>
+              <TextBrush>Black</TextBrush>
+              <Type>Expression</Type>
+              <VertAlignment>Center</VertAlignment>
+            </Text66>
+            <Text67 Ref="63" type="Text" isKey="true">
+              <Border>AdvBlack;2;Solid;Black;1;Solid;Black;2;Solid;Black;2;Solid;False;4;Black</Border>
+              <Brush>[216:216:216]</Brush>
+              <ClientRectangle>5.4,0,2.2,0.6</ClientRectangle>
+              <Conditions isList="true" count="0" />
+              <Font>Arial,8,Bold</Font>
+              <Guid>d86e7c8bf1ab4b8dbdf9e27137fb55a8</Guid>
+              <HorAlignment>Center</HorAlignment>
+              <Margins>0,0,0,0</Margins>
+              <Name>Text67</Name>
+              <Page isRef="15" />
+              <Parent isRef="60" />
+              <Text>{LastIf(MovementAndParkingsStatistics.PeriodEnd.ToString("HH:mm"),MovementAndParkingsStatistics.PeriodType == "Movement")}</Text>
+              <TextBrush>Black</TextBrush>
+              <Type>Expression</Type>
+              <VertAlignment>Center</VertAlignment>
+            </Text67>
+            <Text68 Ref="64" type="Text" isKey="true">
+              <Border>AdvBlack;2;Solid;Black;1;Solid;Black;2;Solid;Black;2;Solid;False;4;Black</Border>
+              <Brush>[216:216:216]</Brush>
+              <ClientRectangle>7.6,0,2.2,0.6</ClientRectangle>
+              <Conditions isList="true" count="0" />
+              <Font>Arial,8,Bold</Font>
+              <Guid>1675f9e98cef439089e6a413d02514eb</Guid>
+              <HorAlignment>Center</HorAlignment>
+              <Margins>0,0,0,0</Margins>
+              <Name>Text68</Name>
+              <Page isRef="15" />
+              <Parent isRef="60" />
+              <Text>{IIF((MovementAndParkingsStatistics.PeriodType == "Movement"),
+DateDiff(DateTime.Parse(MovementAndParkingsStatistics.PeriodEnd.ToString()),DateTime.Parse(MovementAndParkingsStatistics.PeriodBegin.ToString())),
+DateDiff(DateTime.Parse(MovementAndParkingsStatistics.PeriodEnd.ToString()),DateTime.Parse(MovementAndParkingsStatistics.PeriodBegin.ToString())))}</Text>
+              <TextBrush>[0:0:0]</TextBrush>
+              <Type>Expression</Type>
+              <VertAlignment>Center</VertAlignment>
+            </Text68>
+            <Text69 Ref="65" type="Text" isKey="true">
+              <Border>AdvBlack;2;Solid;Black;1;Solid;Black;2;Solid;Black;2;Solid;False;4;Black</Border>
+              <Brush>[216:216:216]</Brush>
+              <ClientRectangle>9.8,0,2,0.6</ClientRectangle>
+              <Conditions isList="true" count="0" />
+              <Font>Arial,8,Bold</Font>
+              <Guid>0199e5f4a800404bb0ed27a98f35fc04</Guid>
+              <HorAlignment>Center</HorAlignment>
+              <Margins>0,0,0,0</Margins>
+              <Name>Text69</Name>
+              <Page isRef="15" />
+              <Parent isRef="60" />
+              <Text>{SumTime(DataMovementAndParkingsStatistics,TimeSpan.Parse(MovementAndParkingsStatistics.EngineIdleDuration))}</Text>
+              <TextBrush>[0:0:0]</TextBrush>
+              <Type>Expression</Type>
+              <VertAlignment>Center</VertAlignment>
+            </Text69>
+            <Text70 Ref="66" type="Text" isKey="true">
+              <Border>AdvBlack;2;Solid;Black;1;Solid;Black;2;Solid;Black;2;Solid;False;4;Black</Border>
+              <Brush>[216:216:216]</Brush>
+              <ClientRectangle>11.8,0,2,0.6</ClientRectangle>
+              <Conditions isList="true" count="0" />
+              <Font>Arial,8,Bold</Font>
+              <Guid>86c70dcecc6c4cad9fafc7d7d4bc4fdc</Guid>
+              <HorAlignment>Center</HorAlignment>
+              <Margins>0,0,0,0</Margins>
+              <Name>Text70</Name>
+              <Page isRef="15" />
+              <Parent isRef="60" />
+              <Text>{SumTime(DataMovementAndParkingsStatistics,TimeSpan.Parse(MovementAndParkingsStatistics.EngineActiveWorkDuration))}</Text>
+              <TextBrush>[0:0:0]</TextBrush>
+              <Type>Totals</Type>
+              <VertAlignment>Center</VertAlignment>
+            </Text70>
+            <Text71 Ref="67" type="Text" isKey="true">
+              <Border>AdvBlack;2;Solid;Black;1;Solid;Black;2;Solid;Black;2;Solid;False;4;Black</Border>
+              <Brush>[216:216:216]</Brush>
+              <ClientRectangle>13.8,0,2.6,0.6</ClientRectangle>
+              <Conditions isList="true" count="0" />
+              <Font>Arial,8,Bold</Font>
+              <Guid>1da8b28325914af3b6732a2e55d6353f</Guid>
+              <HorAlignment>Center</HorAlignment>
+              <Margins>0,0,0,0</Margins>
+              <Name>Text71</Name>
+              <Page isRef="15" />
+              <Parent isRef="60" />
+              <Text>{Round((Sum(DataMovementAndParkingsStatistics,MovementAndParkingsStatistics.AverageSpeedKmh)) / (CountIf(MovementAndParkingsStatistics.PeriodType == "Movement") + CountIf(MovementAndParkingsStatistics.PeriodType == "Break")))} км/ч</Text>
+              <TextBrush>[0:0:0]</TextBrush>
+              <Type>Expression</Type>
+              <VertAlignment>Center</VertAlignment>
+            </Text71>
+            <Text72 Ref="68" type="Text" isKey="true">
+              <Border>AdvBlack;2;Solid;Black;1;Solid;Black;2;Solid;Black;2;Solid;False;4;Black</Border>
+              <Brush>[216:216:216]</Brush>
+              <ClientRectangle>16.4,0,2.6,0.6</ClientRectangle>
+              <Conditions isList="true" count="0" />
+              <Font>Arial,8,Bold</Font>
+              <Guid>f50954dcec894c4b9332a4a4c267a080</Guid>
+              <HorAlignment>Center</HorAlignment>
+              <Margins>0,0,0,0</Margins>
+              <Name>Text72</Name>
+              <Page isRef="15" />
+              <Parent isRef="60" />
+              <Text>{Round(Sum(DataMovementAndParkingsStatistics,MovementAndParkingsStatistics.MileageKm))} км</Text>
+              <TextBrush>[0:0:0]</TextBrush>
+              <Type>Expression</Type>
+              <VertAlignment>Center</VertAlignment>
+            </Text72>
+          </Components>
+          <Conditions isList="true" count="0" />
+          <Name>GroupFooterBand1</Name>
+          <Page isRef="15" />
+          <Parent isRef="15" />
+        </GroupFooterBand1>
+        <GroupFooterBand3 Ref="69" type="GroupFooterBand" isKey="true">
+          <Brush>Transparent</Brush>
+          <ClientRectangle>0,14.6,19,0.2</ClientRectangle>
+          <Components isList="true" count="0" />
+          <Conditions isList="true" count="0" />
+          <Name>GroupFooterBand3</Name>
+          <Page isRef="15" />
+          <Parent isRef="15" />
+        </GroupFooterBand3>
+        <GroupFooterBand2 Ref="70" type="GroupFooterBand" isKey="true">
+          <Brush>Transparent</Brush>
+          <ClientRectangle>0,15.6,19,4.8</ClientRectangle>
+          <Components isList="true" count="25">
+            <UnitReportSummaryTotalTimeLabel Ref="71" type="Text" isKey="true">
+              <Border>AdvBlack;2;Solid;Black;2;Solid;Black;2;Solid;Black;1;Solid;False;4;Black</Border>
+              <Brush>Transparent</Brush>
+              <ClientRectangle>0,0.6,7,0.6</ClientRectangle>
+              <Conditions isList="true" count="0" />
+              <Font>Arial,7</Font>
+              <Guid>35d35c9a3cac46178fe0e828ce639def</Guid>
+              <Margins>10,0,0,0</Margins>
+              <Name>UnitReportSummaryTotalTimeLabel</Name>
+              <Page isRef="15" />
+              <Parent isRef="70" />
+              <Text>Общее время анализа</Text>
+              <TextBrush>Black</TextBrush>
+              <Type>Expression</Type>
+              <VertAlignment>Center</VertAlignment>
+            </UnitReportSummaryTotalTimeLabel>
+            <UnitReportSummaryMileageLabel Ref="72" type="Text" isKey="true">
+              <Border>AdvBlack;2;Solid;Black;1;Solid;Black;2;Solid;Black;1;Solid;False;4;Black</Border>
+              <Brush>Transparent</Brush>
+              <ClientRectangle>10.4,0.6,4.6,0.6</ClientRectangle>
+              <Conditions isList="true" count="0" />
+              <Font>Arial,7</Font>
+              <Guid>d304b29cbba849048497a71efeea3e81</Guid>
+              <Margins>10,0,0,0</Margins>
+              <Name>UnitReportSummaryMileageLabel</Name>
+              <Page isRef="15" />
+              <Parent isRef="70" />
+              <Text>Общий пробег</Text>
+              <TextBrush>Black</TextBrush>
+              <Type>Expression</Type>
+              <VertAlignment>Center</VertAlignment>
+            </UnitReportSummaryMileageLabel>
+            <Text24 Ref="73" type="Text" isKey="true">
+              <Border>AdvBlack;2;Solid;Black;2;Solid;Black;2;Solid;Black;1;Solid;False;4;Black</Border>
+              <Brush>Transparent</Brush>
+              <ClientRectangle>15,0.6,4,0.6</ClientRectangle>
+              <Conditions isList="true" count="0" />
+              <Font>Arial,7</Font>
+              <HorAlignment>Center</HorAlignment>
+              <Margins>0,0,0,0</Margins>
+              <Name>Text24</Name>
+              <Page isRef="15" />
+              <Parent isRef="70" />
+              <Text>{Round(Sum(DataMovementAndParkingsStatistics,MovementAndParkingsStatistics.MileageKm))} км</Text>
+              <TextBrush>Black</TextBrush>
+              <Type>Expression</Type>
+              <VertAlignment>Center</VertAlignment>
+            </Text24>
+            <Text25 Ref="74" type="Text" isKey="true">
+              <Border>AdvBlack;2;Solid;Black;2;Solid;Black;2;Solid;Black;1;Solid;False;4;Black</Border>
+              <Brush>Transparent</Brush>
+              <ClientRectangle>7,0.6,3,0.6</ClientRectangle>
+              <Conditions isList="true" count="0" />
+              <Font>Arial,7</Font>
+              <HorAlignment>Center</HorAlignment>
+              <Margins>0,0,0,0</Margins>
+              <Name>Text25</Name>
+              <Page isRef="15" />
+              <Parent isRef="70" />
+              <Text>{TrackPeriodsMileageStatistics.TotalDuration}</Text>
+              <TextBrush>Black</TextBrush>
+              <VertAlignment>Center</VertAlignment>
+            </Text25>
+            <Text26 Ref="75" type="Text" isKey="true">
+              <Border>All;Black;1;Solid;False;4;Black</Border>
+              <Brush>[255:192:0]</Brush>
+              <ClientRectangle>0,0,19,0.6</ClientRectangle>
+              <Conditions isList="true" count="0" />
+              <Font>Arial,11.25,Bold</Font>
+              <Guid>d357761729ec4f2eac6a81a406384e6a</Guid>
+              <HorAlignment>Center</HorAlignment>
+              <Margins>0,0,0,0</Margins>
+              <Name>Text26</Name>
+              <Page isRef="15" />
+              <Parent isRef="70" />
+              <Text>Итоговые данные</Text>
+              <TextBrush>[0:0:0]</TextBrush>
+              <Type>Expression</Type>
+              <VertAlignment>Center</VertAlignment>
+            </Text26>
+            <Text27 Ref="76" type="Text" isKey="true">
+              <Border>AdvBlack;2;Solid;Black;1;Solid;Black;2;Solid;Black;1;Solid;False;4;Black</Border>
+              <Brush>Transparent</Brush>
+              <ClientRectangle>7,1.2,3,0.6</ClientRectangle>
+              <Conditions isList="true" count="0" />
+              <Font>Arial,7</Font>
+              <HorAlignment>Center</HorAlignment>
+              <Margins>0,0,0,0</Margins>
+              <Name>Text27</Name>
+              <Page isRef="15" />
+              <Parent isRef="70" />
+              <Text>{TrackPeriodsMileageStatistics.ParkingDuration}</Text>
+              <TextBrush>Black</TextBrush>
+              <VertAlignment>Center</VertAlignment>
+            </Text27>
+            <Text28 Ref="77" type="Text" isKey="true">
+              <Border>AdvBlack;2;Solid;Black;2;Solid;Black;2;Solid;Black;1;Solid;False;4;Black</Border>
+              <Brush>Transparent</Brush>
+              <ClientRectangle>0,1.2,7,0.6</ClientRectangle>
+              <Conditions isList="true" count="0" />
+              <Font>Arial,7</Font>
+              <Guid>a0108e496bef4541bed3046957a48739</Guid>
+              <Margins>10,0,0,0</Margins>
+              <Name>Text28</Name>
+              <Page isRef="15" />
+              <Parent isRef="70" />
+              <Text>Время на стоянках</Text>
+              <TextBrush>Black</TextBrush>
+              <Type>Expression</Type>
+              <VertAlignment>Center</VertAlignment>
+            </Text28>
+            <Text30 Ref="78" type="Text" isKey="true">
+              <Border>AdvBlack;2;Solid;Black;1;Solid;Black;2;Solid;Black;1;Solid;False;4;Black</Border>
+              <Brush>Transparent</Brush>
+              <ClientRectangle>7,1.8,3,0.6</ClientRectangle>
+              <Conditions isList="true" count="0" />
+              <Font>Arial,7</Font>
+              <HorAlignment>Center</HorAlignment>
+              <Margins>0,0,0,0</Margins>
+              <Name>Text30</Name>
+              <Page isRef="15" />
+              <Parent isRef="70" />
+              <Text>{TrackPeriodsMileageStatistics.MovementDuration}</Text>
+              <TextBrush>Black</TextBrush>
+              <VertAlignment>Center</VertAlignment>
+            </Text30>
+            <Text31 Ref="79" type="Text" isKey="true">
+              <Border>AdvBlack;2;Solid;Black;2;Solid;Black;2;Solid;Black;1;Solid;False;4;Black</Border>
+              <Brush>Transparent</Brush>
+              <ClientRectangle>0,2.4,7,0.6</ClientRectangle>
+              <Conditions isList="true" count="0" />
+              <Font>Arial,7</Font>
+              <Guid>f7594f5b37404341839e12c5cdb6fc6d</Guid>
+              <Margins>10,0,0,0</Margins>
+              <Name>Text31</Name>
+              <Page isRef="15" />
+              <Parent isRef="70" />
+              <Text>Время в разрыве</Text>
+              <TextBrush>Black</TextBrush>
+              <Type>Expression</Type>
+              <VertAlignment>Center</VertAlignment>
+            </Text31>
+            <Text32 Ref="80" type="Text" isKey="true">
+              <Border>AdvBlack;2;Solid;Black;1;Solid;Black;2;Solid;Black;1;Solid;False;4;Black</Border>
+              <Brush>Transparent</Brush>
+              <ClientRectangle>7,2.4,3,0.6</ClientRectangle>
+              <Conditions isList="true" count="0" />
+              <Font>Arial,7</Font>
+              <HorAlignment>Center</HorAlignment>
+              <Margins>0,0,0,0</Margins>
+              <Name>Text32</Name>
+              <Page isRef="15" />
+              <Parent isRef="70" />
+              <Text>{TrackPeriodsMileageStatistics.BreakDuration}</Text>
+              <TextBrush>Black</TextBrush>
+              <VertAlignment>Center</VertAlignment>
+            </Text32>
+            <Text33 Ref="81" type="Text" isKey="true">
+              <Border>AdvBlack;2;Solid;Black;2;Solid;Black;2;Solid;Black;1;Solid;False;4;Black</Border>
+              <Brush>Transparent</Brush>
+              <ClientRectangle>0,3,7,0.6</ClientRectangle>
+              <Conditions isList="true" count="0" />
+              <Font>Arial,7</Font>
+              <Guid>0edc75f1934946ca98556f9ef97b6e4e</Guid>
+              <Margins>10,0,0,0</Margins>
+              <Name>Text33</Name>
+              <Page isRef="15" />
+              <Parent isRef="70" />
+              <Text>Время работы двигателя</Text>
+              <TextBrush>Black</TextBrush>
+              <Type>Expression</Type>
+              <VertAlignment>Center</VertAlignment>
+            </Text33>
+            <Text34 Ref="82" type="Text" isKey="true">
+              <Border>AdvBlack;2;Solid;Black;1;Solid;Black;2;Solid;Black;1;Solid;False;4;Black</Border>
+              <Brush>Transparent</Brush>
+              <ClientRectangle>7,3,3,0.6</ClientRectangle>
+              <Conditions isList="true" count="0" />
+              <Font>Arial,7</Font>
+              <HorAlignment>Center</HorAlignment>
+              <Margins>0,0,0,0</Margins>
+              <Name>Text34</Name>
+              <Page isRef="15" />
+              <Parent isRef="70" />
+              <Text>{MotorModesStatistics.EngineOnDuration}</Text>
+              <TextBrush>Black</TextBrush>
+              <VertAlignment>Center</VertAlignment>
+            </Text34>
+            <Text35 Ref="83" type="Text" isKey="true">
+              <Border>AdvBlack;2;Solid;Black;2;Solid;Black;2;Solid;Black;1;Solid;False;4;Black</Border>
+              <Brush>Transparent</Brush>
+              <ClientRectangle>0,3.6,7,0.6</ClientRectangle>
+              <Conditions isList="true" count="0" />
+              <Font>Arial,7</Font>
+              <Guid>bfec7e2439454b879c72c33fd18beda9</Guid>
+              <Margins>10,0,0,0</Margins>
+              <Name>Text35</Name>
+              <Page isRef="15" />
+              <Parent isRef="70" />
+              <Text>Время работы двигателя на холостом ходу</Text>
+              <TextBrush>Black</TextBrush>
+              <Type>Expression</Type>
+              <VertAlignment>Center</VertAlignment>
+            </Text35>
+            <Text36 Ref="84" type="Text" isKey="true">
+              <Border>AdvBlack;2;Solid;Black;2;Solid;Black;2;Solid;Black;1;Solid;False;4;Black</Border>
+              <Brush>Transparent</Brush>
+              <ClientRectangle>0,4.2,7,0.6</ClientRectangle>
+              <Conditions isList="true" count="0" />
+              <Font>Arial,7</Font>
+              <Guid>18e49f3f04f94a4abd9c9f146136f54f</Guid>
+              <Margins>10,0,0,0</Margins>
+              <Name>Text36</Name>
+              <Page isRef="15" />
+              <Parent isRef="70" />
+              <Text>Время работы двигателя под нагрузкой</Text>
+              <TextBrush>Black</TextBrush>
+              <Type>Expression</Type>
+              <VertAlignment>Center</VertAlignment>
+            </Text36>
+            <Text37 Ref="85" type="Text" isKey="true">
+              <Border>AdvBlack;2;Solid;Black;1;Solid;Black;2;Solid;Black;1;Solid;False;4;Black</Border>
+              <Brush>Transparent</Brush>
+              <ClientRectangle>7,4.2,3,0.6</ClientRectangle>
+              <Conditions isList="true" count="0" />
+              <Font>Arial,7</Font>
+              <HorAlignment>Center</HorAlignment>
+              <Margins>0,0,0,0</Margins>
+              <Name>Text37</Name>
+              <Page isRef="15" />
+              <Parent isRef="70" />
+              <Text>{SumTime(DataMovementAndParkingsStatistics,TimeSpan.Parse(MovementAndParkingsStatistics.EngineActiveWorkDuration))}</Text>
+              <TextBrush>Black</TextBrush>
+              <Type>Expression</Type>
+              <VertAlignment>Center</VertAlignment>
+            </Text37>
+            <Text38 Ref="86" type="Text" isKey="true">
+              <Border>AdvBlack;2;Solid;Black;1;Solid;Black;2;Solid;Black;1;Solid;False;4;Black</Border>
+              <Brush>Transparent</Brush>
+              <ClientRectangle>7,3.6,3,0.6</ClientRectangle>
+              <Conditions isList="true" count="0" />
+              <Font>Arial,7</Font>
+              <HorAlignment>Center</HorAlignment>
+              <Margins>0,0,0,0</Margins>
+              <Name>Text38</Name>
+              <Page isRef="15" />
+              <Parent isRef="70" />
+              <Text>{SumTime(DataMovementAndParkingsStatistics,TimeSpan.Parse(MovementAndParkingsStatistics.EngineIdleDuration))}</Text>
+              <TextBrush>Black</TextBrush>
+              <Type>Expression</Type>
+              <VertAlignment>Center</VertAlignment>
+            </Text38>
+            <Text40 Ref="87" type="Text" isKey="true">
+              <Border>AdvBlack;2;Solid;Black;1;Solid;Black;2;Solid;Black;1;Solid;False;4;Black</Border>
+              <Brush>Transparent</Brush>
+              <ClientRectangle>15,1.2,4,0.6</ClientRectangle>
+              <Conditions isList="true" count="0" />
+              <Font>Arial,7</Font>
+              <HorAlignment>Center</HorAlignment>
+              <Margins>0,0,0,0</Margins>
+              <Name>Text40</Name>
+              <Page isRef="15" />
+              <Parent isRef="70" />
+              <Text>{Round(SumIf(DataMovementAndParkingsStatistics,MovementAndParkingsStatistics.MileageKm,(MovementAndParkingsStatistics.PeriodType == "Break")))} км</Text>
+              <TextBrush>Black</TextBrush>
+              <Type>Expression</Type>
+              <VertAlignment>Center</VertAlignment>
+            </Text40>
+            <Text39 Ref="88" type="Text" isKey="true">
+              <Border>AdvBlack;2;Solid;Black;1;Solid;Black;2;Solid;Black;1;Solid;False;4;Black</Border>
+              <Brush>Transparent</Brush>
+              <ClientRectangle>10.4,1.2,4.6,0.6</ClientRectangle>
+              <Conditions isList="true" count="0" />
+              <Font>Arial,7</Font>
+              <Guid>dd0524c99b61421685f6180fea77ea00</Guid>
+              <Margins>10,0,0,0</Margins>
+              <Name>Text39</Name>
+              <Page isRef="15" />
+              <Parent isRef="70" />
+              <Text>Пробег в разрыве</Text>
+              <TextBrush>Black</TextBrush>
+              <Type>Expression</Type>
+              <VertAlignment>Center</VertAlignment>
+            </Text39>
+            <Text41 Ref="89" type="Text" isKey="true">
+              <Border>AdvBlack;2;Solid;Black;1;Solid;Black;2;Solid;Black;1;Solid;False;4;Black</Border>
+              <Brush>Transparent</Brush>
+              <ClientRectangle>10.4,1.8,4.6,0.6</ClientRectangle>
+              <Conditions isList="true" count="0" />
+              <Font>Arial,7</Font>
+              <Guid>7a742cffa46e4b449da7c004b1de1764</Guid>
+              <Margins>10,0,0,0</Margins>
+              <Name>Text41</Name>
+              <Page isRef="15" />
+              <Parent isRef="70" />
+              <Text>Средняя скорость</Text>
+              <TextBrush>Black</TextBrush>
+              <Type>Expression</Type>
+              <VertAlignment>Center</VertAlignment>
+            </Text41>
+            <Text42 Ref="90" type="Text" isKey="true">
+              <Border>AdvBlack;2;Solid;Black;1;Solid;Black;2;Solid;Black;1;Solid;False;4;Black</Border>
+              <Brush>Transparent</Brush>
+              <ClientRectangle>15,1.8,4,0.6</ClientRectangle>
+              <Conditions isList="true" count="0" />
+              <Font>Arial,7</Font>
+              <HorAlignment>Center</HorAlignment>
+              <Margins>0,0,0,0</Margins>
+              <Name>Text42</Name>
+              <Page isRef="15" />
+              <Parent isRef="70" />
+              <Text>{Round((Sum(DataMovementAndParkingsStatistics,MovementAndParkingsStatistics.AverageSpeedKmh)) / (CountIf(MovementAndParkingsStatistics.PeriodType == "Movement") + CountIf(MovementAndParkingsStatistics.PeriodType == "Break")))} км/ч</Text>
+              <TextBrush>Black</TextBrush>
+              <Type>Expression</Type>
+              <VertAlignment>Center</VertAlignment>
+            </Text42>
+            <Text43 Ref="91" type="Text" isKey="true">
+              <Border>AdvBlack;2;Solid;Black;1;Solid;Black;2;Solid;Black;1;Solid;False;4;Black</Border>
+              <Brush>Transparent</Brush>
+              <ClientRectangle>10.4,2.4,4.6,0.6</ClientRectangle>
+              <Conditions isList="true" count="0" />
+              <Font>Arial,7</Font>
+              <Guid>ba4832ab347f4fbea7d6fc56b2033adb</Guid>
+              <Margins>10,0,0,0</Margins>
+              <Name>Text43</Name>
+              <Page isRef="15" />
+              <Parent isRef="70" />
+              <Text>Максимальная скорость</Text>
+              <TextBrush>Black</TextBrush>
+              <Type>Expression</Type>
+              <VertAlignment>Center</VertAlignment>
+            </Text43>
+            <Text44 Ref="92" type="Text" isKey="true">
+              <Border>AdvBlack;2;Solid;Black;1;Solid;Black;2;Solid;Black;1;Solid;False;4;Black</Border>
+              <Brush>Transparent</Brush>
+              <ClientRectangle>15,2.4,4,0.6</ClientRectangle>
+              <Conditions isList="true" count="0" />
+              <Font>Arial,7</Font>
+              <HorAlignment>Center</HorAlignment>
+              <Margins>0,0,0,0</Margins>
+              <Name>Text44</Name>
+              <Page isRef="15" />
+              <Parent isRef="70" />
+              <Text>{Round(Max(DataMovementAndParkingsStatistics,MovementAndParkingsStatistics.MaximumSpeedKmh))} км/ч</Text>
+              <TextBrush>Black</TextBrush>
+              <Type>Expression</Type>
+              <VertAlignment>Center</VertAlignment>
+            </Text44>
+            <Text45 Ref="93" type="Text" isKey="true">
+              <Border>AdvBlack;2;Solid;Black;1;Solid;Black;2;Solid;Black;1;Solid;False;4;Black</Border>
+              <Brush>Transparent</Brush>
+              <ClientRectangle>10.4,3,4.6,1.8</ClientRectangle>
+              <Conditions isList="true" count="0" />
+              <Font>Arial,7</Font>
+              <Margins>0,0,0,0</Margins>
+              <Name>Text45</Name>
+              <Page isRef="15" />
+              <Parent isRef="70" />
+              <Text>    Расчетный расход</Text>
+              <TextBrush>[0:0:0]</TextBrush>
+              <Type>Expression</Type>
+              <VertAlignment>Center</VertAlignment>
+            </Text45>
+            <Text46 Ref="94" type="Text" isKey="true">
+              <Border>AdvBlack;2;Solid;Black;1;Solid;Black;2;Solid;Black;1;Solid;False;4;Black</Border>
+              <Brush>Transparent</Brush>
+              <ClientRectangle>15,3,4,1.8</ClientRectangle>
+              <Conditions isList="true" count="0" />
+              <Font>Arial,7</Font>
+              <Margins>0,0,0,0</Margins>
+              <Name>Text46</Name>
+              <Page isRef="15" />
+              <Parent isRef="70" />
+              <TextBrush>[0:0:0]</TextBrush>
+              <Type>Expression</Type>
+              <VertAlignment>Center</VertAlignment>
+            </Text46>
+            <Text29 Ref="95" type="Text" isKey="true">
+              <Border>AdvBlack;2;Solid;Black;2;Solid;Black;2;Solid;Black;1;Solid;False;4;Black</Border>
+              <Brush>Transparent</Brush>
+              <ClientRectangle>0,1.8,7,0.6</ClientRectangle>
+              <Conditions isList="true" count="0" />
+              <Font>Arial,7</Font>
+              <Guid>969b95aea2544256b40fc6bf22d1dfce</Guid>
+              <Margins>10,0,0,0</Margins>
+              <Name>Text29</Name>
+              <Page isRef="15" />
+              <Parent isRef="70" />
+              <Text>Время в движении</Text>
+              <TextBrush>Black</TextBrush>
+              <Type>Expression</Type>
+              <VertAlignment>Center</VertAlignment>
+            </Text29>
+          </Components>
+          <Conditions isList="true" count="0" />
+          <Name>GroupFooterBand2</Name>
+          <Page isRef="15" />
+          <Parent isRef="15" />
+        </GroupFooterBand2>
+      </Components>
+      <ComponentStyle>Коллекция1_Данные1_Стиль нечетных строк</ComponentStyle>
+      <Conditions isList="true" count="0" />
+      <Guid>8e6bb507c5984e7ea3ecfbb77e441d46</Guid>
+      <Margins>1,1,1,1</Margins>
+      <Name>Page1</Name>
+      <PageHeight>29.7</PageHeight>
+      <PageWidth>21</PageWidth>
+      <Report isRef="0" />
+    </Page1>
+  </Pages>
+  <ReferencedAssemblies isList="true" count="9">
+    <value>System.Dll</value>
+    <value>System.Drawing.Dll</value>
+    <value>System.Windows.Forms.Dll</value>
+    <value>System.Data.Dll</value>
+    <value>System.Xml.Dll</value>
+    <value>Stimulsoft.Controls.Dll</value>
+    <value>Stimulsoft.Base.Dll</value>
+    <value>Stimulsoft.Report.Dll</value>
+    <value>Scout.Plugins.Core</value>
+  </ReferencedAssemblies>
+  <ReportAlias>Report</ReportAlias>
+  <ReportChanged>4/10/2021 7:04:10 AM</ReportChanged>
+  <ReportCreated>9/25/2020 10:16:32 AM</ReportCreated>
+  <ReportFile>C:\Users\v.dezhurnyuk\Documents\Report2.mrt</ReportFile>
+  <ReportGuid>754aac1f717d49839b757b2ac726e960</ReportGuid>
+  <ReportName>Report</ReportName>
+  <ReportUnit>Centimeters</ReportUnit>
+  <ReportVersion>2020.4.2.0</ReportVersion>
+  <Script>using System;
+using System.Drawing;
+using System.Windows.Forms;
+using System.Data;
+using Stimulsoft.Controls;
+using Stimulsoft.Base.Drawing;
+using Stimulsoft.Report;
+using Stimulsoft.Report.Dialogs;
+using Stimulsoft.Report.Components;
+
+namespace Reports
+{
+    public class Report : Stimulsoft.Report.StiReport
+    {
+        public Report()        {
+            this.InitializeComponent();
+        }
+
+        #region StiReport Designer generated code - do not modify
+		#endregion StiReport Designer generated code - do not modify
+    }
+}
+</Script>
+  <ScriptLanguage>CSharp</ScriptLanguage>
+  <Styles isList="true" count="13">
+    <Коллекция1_Заголовок_Отчета1 Ref="96" type="Stimulsoft.Report.StiStyle" isKey="true">
+      <Border>None;[148:167:190];1;Solid;False;4;Black</Border>
+      <Brush>Transparent</Brush>
+      <CollectionName>Коллекция1</CollectionName>
+      <Conditions isList="true" count="1">
+        <Item95 Ref="97" type="Stimulsoft.Report.StiStyleCondition" isKey="true">
+          <ComponentType>Text, Primitive, Image, CheckBox</ComponentType>
+          <Placement>ReportTitle</Placement>
+          <Type>ComponentType, Placement, PlacementNestedLevel</Type>
+        </Item95>
+      </Conditions>
+      <Font>Arial,14,Bold</Font>
+      <Name>Коллекция1_Заголовок_Отчета1</Name>
+      <NegativeTextBrush>Red</NegativeTextBrush>
+      <TextBrush>[0:17:40]</TextBrush>
+    </Коллекция1_Заголовок_Отчета1>
+    <Коллекция1_Заголовок_Отчета2 Ref="98" type="Stimulsoft.Report.StiStyle" isKey="true">
+      <Border>None;[148:167:190];1;Solid;False;4;Black</Border>
+      <Brush>Transparent</Brush>
+      <CollectionName>Коллекция1</CollectionName>
+      <Conditions isList="true" count="1">
+        <Item97 Ref="99" type="Stimulsoft.Report.StiStyleCondition" isKey="true">
+          <ComponentType>Text, Primitive, Image, CheckBox</ComponentType>
+          <OperationPlacementNestedLevel>GreaterThanOrEqualTo</OperationPlacementNestedLevel>
+          <Placement>ReportTitle</Placement>
+          <PlacementNestedLevel>2</PlacementNestedLevel>
+          <Type>ComponentType, Placement, PlacementNestedLevel</Type>
+        </Item97>
+      </Conditions>
+      <Font>Arial,10,Bold</Font>
+      <Name>Коллекция1_Заголовок_Отчета2</Name>
+      <NegativeTextBrush>Red</NegativeTextBrush>
+      <TextBrush>[0:17:40]</TextBrush>
+    </Коллекция1_Заголовок_Отчета2>
+    <Коллекция1_Итог_Отчета1 Ref="100" type="Stimulsoft.Report.StiStyle" isKey="true">
+      <Border>None;[148:167:190];1;Solid;False;4;Black</Border>
+      <Brush>Transparent</Brush>
+      <CollectionName>Коллекция1</CollectionName>
+      <Conditions isList="true" count="1">
+        <Item99 Ref="101" type="Stimulsoft.Report.StiStyleCondition" isKey="true">
+          <ComponentType>Text, Primitive, Image, CheckBox</ComponentType>
+          <Placement>ReportSummary</Placement>
+          <Type>ComponentType, Placement, PlacementNestedLevel</Type>
+        </Item99>
+      </Conditions>
+      <Font>Arial,12,Bold</Font>
+      <Name>Коллекция1_Итог_Отчета1</Name>
+      <NegativeTextBrush>Red</NegativeTextBrush>
+      <TextBrush>[0:17:40]</TextBrush>
+    </Коллекция1_Итог_Отчета1>
+    <Коллекция1_Итог_Отчета2 Ref="102" type="Stimulsoft.Report.StiStyle" isKey="true">
+      <Border>None;[148:167:190];1;Solid;False;4;Black</Border>
+      <Brush>Transparent</Brush>
+      <CollectionName>Коллекция1</CollectionName>
+      <Conditions isList="true" count="1">
+        <Item101 Ref="103" type="Stimulsoft.Report.StiStyleCondition" isKey="true">
+          <ComponentType>Text, Primitive, Image, CheckBox</ComponentType>
+          <OperationPlacementNestedLevel>GreaterThanOrEqualTo</OperationPlacementNestedLevel>
+          <Placement>ReportSummary</Placement>
+          <PlacementNestedLevel>2</PlacementNestedLevel>
+          <Type>ComponentType, Placement, PlacementNestedLevel</Type>
+        </Item101>
+      </Conditions>
+      <Font>Arial,10,Bold</Font>
+      <Name>Коллекция1_Итог_Отчета2</Name>
+      <NegativeTextBrush>Red</NegativeTextBrush>
+      <TextBrush>[0:17:40]</TextBrush>
+    </Коллекция1_Итог_Отчета2>
+    <Коллекция1_Заголовок_Страницы Ref="104" type="Stimulsoft.Report.StiStyle" isKey="true">
+      <Border>None;[148:167:190];1;Solid;False;4;Black</Border>
+      <Brush>Transparent</Brush>
+      <CollectionName>Коллекция1</CollectionName>
+      <Conditions isList="true" count="1">
+        <Item103 Ref="105" type="Stimulsoft.Report.StiStyleCondition" isKey="true">
+          <ComponentType>Text, Primitive, Image, CheckBox</ComponentType>
+          <Placement>PageHeader</Placement>
+          <Type>ComponentType, Placement</Type>
+        </Item103>
+      </Conditions>
+      <Font>Arial,10</Font>
+      <Name>Коллекция1_Заголовок_Страницы</Name>
+      <NegativeTextBrush>Red</NegativeTextBrush>
+      <TextBrush>[0:17:40]</TextBrush>
+    </Коллекция1_Заголовок_Страницы>
+    <Коллекция1_Итог_Страницы Ref="106" type="Stimulsoft.Report.StiStyle" isKey="true">
+      <Border>None;[148:167:190];1;Solid;False;4;Black</Border>
+      <Brush>Transparent</Brush>
+      <CollectionName>Коллекция1</CollectionName>
+      <Conditions isList="true" count="1">
+        <Item105 Ref="107" type="Stimulsoft.Report.StiStyleCondition" isKey="true">
+          <ComponentType>Text, Primitive, Image, CheckBox</ComponentType>
+          <Placement>PageFooter</Placement>
+          <Type>ComponentType, Placement</Type>
+        </Item105>
+      </Conditions>
+      <Font>Arial,10</Font>
+      <Name>Коллекция1_Итог_Страницы</Name>
+      <NegativeTextBrush>Red</NegativeTextBrush>
+      <TextBrush>[0:17:40]</TextBrush>
+    </Коллекция1_Итог_Страницы>
+    <Коллекция1_Заголовок_Группы1 Ref="108" type="Stimulsoft.Report.StiStyle" isKey="true">
+      <AllowUseBorderSidesFromLocation>True</AllowUseBorderSidesFromLocation>
+      <Border>None;[148:167:190];1;Solid;False;4;Black</Border>
+      <Brush>Transparent</Brush>
+      <CollectionName>Коллекция1</CollectionName>
+      <Conditions isList="true" count="1">
+        <Item107 Ref="109" type="Stimulsoft.Report.StiStyleCondition" isKey="true">
+          <ComponentType>Text, Primitive, Image, CheckBox</ComponentType>
+          <OperationPlacementNestedLevel>GreaterThanOrEqualTo</OperationPlacementNestedLevel>
+          <Placement>GroupHeader</Placement>
+          <Type>ComponentType, Placement, PlacementNestedLevel</Type>
+        </Item107>
+      </Conditions>
+      <Font>Arial,13,Bold</Font>
+      <Name>Коллекция1_Заголовок_Группы1</Name>
+      <NegativeTextBrush>Red</NegativeTextBrush>
+      <TextBrush>[48:67:90]</TextBrush>
+    </Коллекция1_Заголовок_Группы1>
+    <Коллекция1_Итог_Группы1 Ref="110" type="Stimulsoft.Report.StiStyle" isKey="true">
+      <AllowUseBorderSidesFromLocation>True</AllowUseBorderSidesFromLocation>
+      <Border>None;[148:167:190];1;Solid;False;4;Black</Border>
+      <Brush>Transparent</Brush>
+      <CollectionName>Коллекция1</CollectionName>
+      <Conditions isList="true" count="1">
+        <Item109 Ref="111" type="Stimulsoft.Report.StiStyleCondition" isKey="true">
+          <ComponentType>Text, Primitive, Image, CheckBox</ComponentType>
+          <Placement>GroupFooter</Placement>
+          <Type>ComponentType, Placement, PlacementNestedLevel</Type>
+        </Item109>
+      </Conditions>
+      <Font>Arial,13,Bold</Font>
+      <Name>Коллекция1_Итог_Группы1</Name>
+      <NegativeTextBrush>Red</NegativeTextBrush>
+      <TextBrush>[48:67:90]</TextBrush>
+    </Коллекция1_Итог_Группы1>
+    <Коллекция1_Заголовок_Данных1 Ref="112" type="Stimulsoft.Report.StiStyle" isKey="true">
+      <AllowUseBorderSidesFromLocation>True</AllowUseBorderSidesFromLocation>
+      <Border>None;[148:167:190];1;Solid;False;4;Black;True</Border>
+      <Brush>[198:217:240]</Brush>
+      <CollectionName>Коллекция1</CollectionName>
+      <Conditions isList="true" count="1">
+        <Item111 Ref="113" type="Stimulsoft.Report.StiStyleCondition" isKey="true">
+          <ComponentType>Text, Primitive, Image, CheckBox</ComponentType>
+          <OperationPlacementNestedLevel>GreaterThanOrEqualTo</OperationPlacementNestedLevel>
+          <Placement>Header</Placement>
+          <Type>ComponentType, Placement, PlacementNestedLevel</Type>
+        </Item111>
+      </Conditions>
+      <Font>Arial,8,Bold</Font>
+      <Name>Коллекция1_Заголовок_Данных1</Name>
+      <NegativeTextBrush>Red</NegativeTextBrush>
+      <TextBrush>[0:17:40]</TextBrush>
+    </Коллекция1_Заголовок_Данных1>
+    <Коллекция1_Данные1 Ref="114" type="Stimulsoft.Report.StiStyle" isKey="true">
+      <AllowUseBorderSidesFromLocation>True</AllowUseBorderSidesFromLocation>
+      <Border>None;[148:167:190];1;Solid;False;4;Black;True</Border>
+      <Brush>Transparent</Brush>
+      <CollectionName>Коллекция1</CollectionName>
+      <Conditions isList="true" count="1">
+        <Item113 Ref="115" type="Stimulsoft.Report.StiStyleCondition" isKey="true">
+          <ComponentType>Text, Primitive, Image, CheckBox</ComponentType>
+          <OperationPlacementNestedLevel>GreaterThanOrEqualTo</OperationPlacementNestedLevel>
+          <Placement>Data</Placement>
+          <Type>ComponentType, Placement, PlacementNestedLevel</Type>
+        </Item113>
+      </Conditions>
+      <Font>Arial,8</Font>
+      <Name>Коллекция1_Данные1</Name>
+      <NegativeTextBrush>Red</NegativeTextBrush>
+      <TextBrush>[0:17:40]</TextBrush>
+    </Коллекция1_Данные1>
+    <Коллекция1_Данные1_Стиль_x0020_нечетных_x0020_строк Ref="116" type="Stimulsoft.Report.StiStyle" isKey="true">
+      <AllowUseBorderSidesFromLocation>True</AllowUseBorderSidesFromLocation>
+      <Border>None;[148:167:190];1;Solid;False;4;Black;True</Border>
+      <Brush>[255:255:255]</Brush>
+      <CollectionName>Коллекция1</CollectionName>
+      <Conditions isList="true" count="1">
+        <Item115 Ref="117" type="Stimulsoft.Report.StiStyleCondition" isKey="true">
+          <OperationPlacementNestedLevel>GreaterThanOrEqualTo</OperationPlacementNestedLevel>
+          <Placement>DataOddStyle</Placement>
+          <Type>Placement, PlacementNestedLevel</Type>
+        </Item115>
+      </Conditions>
+      <Font>Arial,8</Font>
+      <Name>Коллекция1_Данные1_Стиль нечетных строк</Name>
+      <NegativeTextBrush>Red</NegativeTextBrush>
+      <TextBrush>[0:17:40]</TextBrush>
+    </Коллекция1_Данные1_Стиль_x0020_нечетных_x0020_строк>
+    <Коллекция1_Данные1_Стиль_x0020_четных_x0020_строк Ref="118" type="Stimulsoft.Report.StiStyle" isKey="true">
+      <AllowUseBorderSidesFromLocation>True</AllowUseBorderSidesFromLocation>
+      <Border>None;[148:167:190];1;Solid;False;4;Black;True</Border>
+      <Brush>[235:254:255]</Brush>
+      <CollectionName>Коллекция1</CollectionName>
+      <Conditions isList="true" count="1">
+        <Item117 Ref="119" type="Stimulsoft.Report.StiStyleCondition" isKey="true">
+          <OperationPlacementNestedLevel>GreaterThanOrEqualTo</OperationPlacementNestedLevel>
+          <Placement>DataEvenStyle</Placement>
+          <Type>Placement, PlacementNestedLevel</Type>
+        </Item117>
+      </Conditions>
+      <Font>Arial,8</Font>
+      <Name>Коллекция1_Данные1_Стиль четных строк</Name>
+      <NegativeTextBrush>Red</NegativeTextBrush>
+      <TextBrush>[0:17:40]</TextBrush>
+    </Коллекция1_Данные1_Стиль_x0020_четных_x0020_строк>
+    <Коллекция1_Итог_Данных1 Ref="120" type="Stimulsoft.Report.StiStyle" isKey="true">
+      <AllowUseBorderSidesFromLocation>True</AllowUseBorderSidesFromLocation>
+      <Border>None;[148:167:190];1;Solid;False;4;Black;True</Border>
+      <Brush>[208:227:250]</Brush>
+      <CollectionName>Коллекция1</CollectionName>
+      <Conditions isList="true" count="1">
+        <Item119 Ref="121" type="Stimulsoft.Report.StiStyleCondition" isKey="true">
+          <ComponentType>Text, Primitive, Image, CheckBox</ComponentType>
+          <Placement>Footer</Placement>
+          <Type>ComponentType, Placement, PlacementNestedLevel</Type>
+        </Item119>
+      </Conditions>
+      <Font>Arial,8</Font>
+      <Name>Коллекция1_Итог_Данных1</Name>
+      <NegativeTextBrush>Red</NegativeTextBrush>
+      <TextBrush>[0:17:40]</TextBrush>
+    </Коллекция1_Итог_Данных1>
+  </Styles>
+</StiSerializer>
