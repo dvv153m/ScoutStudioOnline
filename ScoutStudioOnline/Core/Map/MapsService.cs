@@ -29,8 +29,8 @@ namespace ScoutStudioOnline.Core.Map
             _maps.Add(MapType.Yandex, new MapInfo
             {
                 Title = "Yandex",
-                Type = MapType.Yandex,
-                BaseUrl = "https://vec{s}.maps.yandex.net/tiles?l=map&v=17.03.30-0&z={z}&x={x}&y={y}&scale=2",//lang=ru_RU
+                Type = MapType.Yandex,                
+                BaseUrl = "https://core-renderer-tiles.maps.yandex.net/tiles?l=map&v=21.07.05-0-b210701140430&x={x}&y={y}&z={z}&lang=ru_RU",
                 Subdomains = new string[] { "01", "02", "03", "04" },
                 MaxZoom = 19,
                 Attribution = @"&copy; <a href=""http://yandex.ru"" target=""_blank"">Яндекс</a>",
@@ -41,7 +41,8 @@ namespace ScoutStudioOnline.Core.Map
             {
                 Title = "Yandex Спутник",
                 Type = MapType.YandexSatellite,
-                BaseUrl = "https://sat{s}.maps.yandex.net/tiles?l=sat&v=3.307.0&x={x}&y={y}&z={z}",
+                //BaseUrl = "https://sat{s}.maps.yandex.net/tiles?l=sat&v=3.307.0&x={x}&y={y}&z={z}",
+                BaseUrl = "https://core-sat.maps.yandex.net/tiles?l=sat&v=3.564.0&x={x}&y={y}&z={z}&scale=1&lang=ru_RU",
                 Subdomains = new string[] { "01", "02", "03", "04" },
                 MaxZoom = 17,
                 Attribution = @"&copy; <a href=""http://yandex.ru"" target=""_blank"">Яндекс</a>",
