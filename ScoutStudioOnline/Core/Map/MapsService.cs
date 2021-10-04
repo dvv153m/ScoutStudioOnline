@@ -49,6 +49,9 @@ namespace ScoutStudioOnline.Core.Map
                 Projection = MapProjection.EPSG3395
             });
 
+            //todo add yandex hybrid
+            //https://core-renderer-tiles.maps.yandex.net/tiles?l=skl&v=21.07.05-0-b210701140430&x={0}&y={1}&z={2}&lang={3}
+
             _maps.Add(MapType.GoogleStreet, new MapInfo
             {
                 Title = "Google",
